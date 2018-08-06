@@ -5,28 +5,90 @@
         <title>Image Gallery</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <style type="text/css">
-            body {
-                padding-top: 70px;
-            }
-            
-            .jumbotron {
-                color: yellow;
+        <!-- bootstrap 3 cdn -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" 
+            integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" 
+            crossorigin="anonymous">
+        <!-- Font awesome cdn -->
+         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+        <style>
+            h1 {
+                color: white;
             }
 
-            .navbar-inverse {
-                background: orange;
+            h3 {
+                color: lightblue;
             }
-            
+
+            #content {
+                text-align: center;
+                padding-top: 25%;
+            }
+
+            body{
+                background: url(https://images.unsplash.com/photo-1513360371669-4adf3dd7dff8?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=6402d48f35584fbf36a874be1635374b&auto=format&fit=crop&w=1050&q=80);
+                background-size: cover;
+                background-position: center;            
+            }
         </style>
-        <!-- bootstrap 3 cdn -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-        <!-- <link rel="stylesheet" href="/css/bootstrap.css"> -->
     </head>
 
     <body>
+        <!-- ============================================= -->
+        <!-- ================ Nav Bar ==================== -->
+        <!-- ============================================= -->
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+                <!-- Inserting the texts in navbar within a container so that it doesnot stretch whole screen -->
+                <div class="container">
+                    <!-- Brand and toggle get grouped for better mobile display -->               
+                    <!-- The hamburger in mobile view -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" 
+                                data-toggle="collapse" 
+                                data-target="#bs-nav-demo">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="#">
+                            <span class="glyphicon glyphicon-picture" 
+                              aria-hidden="true"></span> SpaceXYZ</a>
+                    </div>
+    
+                    <!-- "nav navbar-collapse" -> what ever we put inside it will collapse in mobile view... -->
+                    <div class="collapse navbar-collapse" id="bs-nav-demo">
+                        <!-- Navbar left selections -->
+                        <ul class="nav navbar-nav">
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Contact</a></li>
+                        </ul>
+                        <!-- Navbar right selections .. we could use <div> but its more conventional to use ul li...-->
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="#">Login</a></li>
+                            <li><a href="#">Sign Up</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
 
-
+        <!-- ============================================= -->
+        <!-- landing page -->
+        <!-- ============================================= -->
+        <div class="container">
+            <div class="row">
+                <!-- <img src="img/purr.jpg"> -->
+                <div class="col-lg-12">
+                    <div id="content">
+                        <h1>Purrfect Match</h1>
+                        <h3>#1 Site for choosing your perfect feline pet</h3>
+                        <hr>
+                        <button class="btn btn-default btn-lg">
+                            <i class="fas fa-paw"></i> Get Started!</button>        
+                    </div>
+                </div>
+            </div>
+        </div>
 
     
 
