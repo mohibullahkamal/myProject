@@ -5,35 +5,62 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="css/bootstrap.css">
+        <style type="text/css">
+            .pink {
+                background: pink;
+                border: 1px solid purple;
+            }
+        </style>
     </head>
 
     <body>
+        
+        <!-- ************************************ -->
+        <!-- ******** Bootstrap Navbar ********** -->
+        <!-- ************************************ -->
+
         <nav class="navbar navbar-default">
             <!-- Inserting the texts in navbar within a container so that it doesnot stretch whole screen -->
             <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->               
+                <!-- The hamburger in mobile view -->
                 <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" 
+                            data-toggle="collapse" 
+                            data-target="#bs-nav-demo">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
                     <a class="navbar-brand" href="#">myBootstrapSite</a>
                 </div>
-                <!-- Navbar left selections -->
-                <ul class="nav navbar-nav">
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
-                </ul>
-                <!-- Navbar right selections .. we could use <div> but its more conventional to use ul li...-->
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#">Login</a></li>
-                    <li><a href="#">Sign Up</a></li>
-                </ul>
+
+                <!-- "nav navbar-collapse" -> what ever we put inside it will collapse in mobile view... -->
+                <div class="collapse navbar-collapse" id="bs-nav-demo">
+                    <!-- Navbar left selections -->
+                    <ul class="nav navbar-nav">
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                    </ul>
+                    <!-- Navbar right selections .. we could use <div> but its more conventional to use ul li...-->
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#">Login</a></li>
+                        <li><a href="#">Sign Up</a></li>
+                    </ul>
+                </div>
+
             </div>
         </nav>
 
-        <!-- *********************************** -->
-        <!-- Default navbar -->
-        <!-- *********************************** -->
+        <!-- ********************************************* -->
+        <!-- Default navbar ******** from Bootstrap website-->
+        <!-- ********************************************* -->
 
-        <nav class="navbar navbar-default" role="navigation">
+        <!-- <nav class="navbar navbar-default" role="navigation">
                 <!-- Brand and toggle get grouped for better mobile display -->
-                <div class="navbar-header">
+                <!-- The hamburger in mobile view -->
+                <!-- <div class="navbar-header">
                   <button type="button" class="navbar-toggle" 
                         data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span>
@@ -42,10 +69,11 @@
                     <span class="icon-bar"></span>
                   </button>
                   <a class="navbar-brand" href="#">Brand</a>
-                </div>
+                </div> -->
               
                 <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <!-- "nav navbar-collapse" -> what ever we put inside it will collapse in mobile view... -->
+                <!-- <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                   <ul class="nav navbar-nav">
                     <li class="active"><a href="#">Link</a></li>
                     <li><a href="#">Link</a></li>
@@ -84,7 +112,32 @@
                     </li>
                   </ul>
                 </div><!-- /.navbar-collapse -->
-              </nav>
+              <!-- </nav> -->
+        <!-- *********************************** -->
+        <!-- *********************************** -->
+
+
+        <!-- ************************************ -->
+        <!-- ****** Bootstrap Grid System ******* -->
+        <!-- *********** OBJECTIVES: **********   -->
+        <!-- 1. Understand purpose of grid system.-->
+        <!-- 2. Understand the 4 different sizes. -->
+        <!-- 3. Write Nested Grids.               -->
+        <!-- ************************************ -->
+        <div class="container">
+            <!-- inside each row we have 12 units to choose from... if we want a row with 3 images.. then each image has 4units .. and so on.. -->
+            <div class="row">
+                <div class="col-lg-6 pink">Column large 6</div>
+                <div class="col-lg-6 pink">Column large 6</div>
+            </div>
+        </div>
+
+
+
+        <!-- *********************************** -->
+        <!-- *********************************** -->
+
+
 
         <!-- jQuery CDN v2.. lower than v3 was required.. have to place this before bootstrap js because this needs the help of jQuery2.0 to run..-->
         <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
