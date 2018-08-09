@@ -16,18 +16,21 @@
         <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
         
         <style>
-            h1 {
+            h1, h3 {
                 color: white;
+                /* x-axis, y-axis, spreadRadius, color */
+                text-shadow: 0px 4px 3px red,
+                             0px 8px 13px green,
+                             0px 18px 23px yellow;
+            }
+            h1 {
                 font-weight: 700;
                 font-size: 5em;
             }
 
             html {
+                /* when we inspect background image in chrome... we see that it cover the html sizing ... which is just 75% of the page... but when we set it to 100%.. now we can control the background image the we want */
                 height: 100%;
-            }
-
-            h3 {
-                color: red;
             }
 
             #content {
@@ -40,6 +43,12 @@
                 background-size: cover;
                 background-position: center;  
                 font-family: Lato;         
+            }
+
+            hr {
+                width: 400px;
+                border-top: 1px solid #f8f8f8;
+                border-bottom: 1px solid rgba(0, 0, 0, 0.2);
             }
         </style>
     </head>
@@ -68,11 +77,10 @@
                         <li class="active"><a href="#">Home </a></li>
                         <li><a href="#">About</a></li>
                         <li><a href="#">Contact</a></li>
-                    </ul>
-                
+                    </ul>       
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="#">LogIn</a></li>
-                        <li><a href="#">SignUp</a></li>
+                        <li><a href="#">LogIn <i class="fa fa-user"></i></a></li>
+                        <li><a href="#">SignUp <i class="fa fa-user-plus"></i></a></li>
                     </ul>
                 </div><!-- /.navbar-collapse -->
             </div><!-- /.container-fluid -->
@@ -84,7 +92,6 @@
         <!-- ============================================= -->
         <div class="container">
             <div class="row">
-                <!-- <img src="img/purr.jpg"> -->
                 <div class="col-lg-12">
                     <div id="content">
                         <h1>Purrfect Match</h1>
