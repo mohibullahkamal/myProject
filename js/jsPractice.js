@@ -5,30 +5,23 @@ var secretNumber = 4;
 
 //ask user for guess
 var guess = prompt("Guess a number..");
-var x = 0;
 
 //check if right
 if (Number(guess) === secretNumber) {
     alert("***You got it right***");
-    x++;
 }
 //check if higher than secretNumber
 else if (guess > secretNumber) {
     alert("Too high... Guess again!!");
-    x++;
 }
 //check if lower than secretNumber
 else if (guess < secretNumber) {
     alert("Too low... Guess again!!");
-    x++;
 }
 //if input is wrong
 else {
     alert("Error Input...");
-    x++;
-}}
-alert("You guessed in " + x + " tries!!")
-
+}
 
 
 
