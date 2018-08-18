@@ -8,7 +8,15 @@ var input = prompt("What would you like to do?"
 while(input !== "q") {
     //handle input
     if(input === "ls") {
-        console.log(todo);
+        //start of list
+        console.log("***********");
+        //iterate through todo and list it
+        todo.forEach(function(myInput) {
+            console.log(todo.indexOf(myInput) +
+                ": " + myInput);
+        });
+        //end of list
+        console.log("***********");
     } else if (input === "n") {
         //ask for new entry
         var newEntry = prompt("Enter new Todo :)");
@@ -21,11 +29,7 @@ while(input !== "q") {
                     + "\n'ls' --> List all Todos"
                     + "\n'q' --> Quit App");
 }
+//quiting App
 console.log("OK ... You are quitting the App!!");
-
-
-
-
-
 
 
