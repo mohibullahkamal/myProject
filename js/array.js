@@ -11,6 +11,7 @@ printReverse([1,2,3,4,5]); // 5,4,3,2,1
 //**** checks whether all input equal ****************
 function isUniform(arr) {
     var first = arr[0];
+    //over here forEach cannot be used because after loop it will always execute "return true" 
     for(var i = 1; i < arr.length; i++) {
         if(arr[i] !== first) {
             return false;
