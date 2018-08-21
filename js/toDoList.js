@@ -56,7 +56,11 @@ function deleteTodo() {
 
 function userSelection() {
     //Prompt for user selection
-    
+    input = prompt("What would you like to do?"
+                    + "\n'n'  --> Add a Todo"
+                    + "\n'ls' --> List all Todos"
+                    + "\n'd' --> Delete a specific Todo"
+                    + "\n'q' --> Quit App");
 }
 //*************************************
 //*************************************
