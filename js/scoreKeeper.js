@@ -11,7 +11,7 @@ var p2Score = 0;
 var numInput = document.querySelector("input");
 var winningScoreDisplay = document.querySelector("p span"); // we did not use id... we purposely did it in a different way...
 var gameOver = false;
-var winningScore = 4;
+var winningScore = 5;
 
 // *** Player1 button functionality ***
 p1Button.addEventListener("click", function(){
@@ -41,13 +41,15 @@ p2Button.addEventListener("click", function(){
 
 // *** Event listener for User Input ***
 numInput.addEventListener("change", function() { // a "change" event will activate anytime any value has been changed... Ideal for this situation cause we could manually add values into the text box and it would not have notified if "click" was used...
-    winningScoreDisplay.textContent = numInput.value; //we are using ".value" to  change the number we get from user input to value... so now we can display that value...
+    winningScoreDisplay.textContent = this.value; //we are using ".value" to  change the number we get from user input to value... so now we can display that value...
+    winningScore = Number(this.value); // "this" refers to "numInput"
+    resetScore();
 });
 
 // *** Reset button functionality ***
 resetButton.addEventListener("click", resetScore);
 
-//separate function for resetScore division of concern..
+//separate function for "resetScore()" separation of concern..
 function resetScore() {
     p1Score = 0;
     p2Score = 0;

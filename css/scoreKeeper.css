@@ -1,3 +1,5 @@
 .winner{
-    color: green;
+    background: green;
+    color: yellow;
+    font-weight: bold;
 }
