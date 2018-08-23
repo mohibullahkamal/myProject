@@ -2,12 +2,14 @@
 <html>
 <head>
     <title>Score Keeper</title>
+    <link rel="stylesheet" type="text/css" 
+        href="../css/scoreKeeper.css">
 </head>
 
 <body>
     <h1><span id="p1Display">0</span> to <span id="p2Display">0</span></h1>
-    <p>Playing to: 5</p>
-    <input type="number">
+    <p>Playing to: <span>3</span></p> <!-- We are purposely not using id here to learn a new way of calling it from .js..... see corresponding .js file -->
+    <input type="number"> <!-- The only input in this page so we dont need to give a specific "id" to call it in .js file.. -->
     <button id="p1">Player One</button>
     <button id="p2">Player Two</button>
     <button id="reset">Reset</button>    
