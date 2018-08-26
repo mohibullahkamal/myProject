@@ -1,21 +1,24 @@
-//array of six colors
+//array of six colors 
 var colors = generateRandomColors(6);
 
-// ***************************
-// ****** All Variables ******
-// ***************************
+// ******************************************************
+// ****** All Variables *********************************
+// ******************************************************
 var squares = document.querySelectorAll(".square");
 var pickedColor = pickColor();
-var display = document.getElementById("colorDisplay");
-display.textContent = pickedColor;
+var colorDisplay = document.getElementById("colorDisplay");
+colorDisplay.textContent = pickedColor;
 
 var msg = document.getElementById("message");
 var h1 = document.querySelector("h1");
-// ***************************
-// ***************************
+var reset = document.getElementById("reset");
+// ******************************************************
+// ******************************************************
 
 
-// lets loop through colors
+// ******************************************************
+// lets loop through colors***************************
+// ******************************************************
 for(var i = 0; i < squares.length; i++) {
     //add innitial colors to square
     squares[i].style.backgroundColor = colors[i];
@@ -38,10 +41,38 @@ for(var i = 0; i < squares.length; i++) {
         }
     });
 }
+// ******************************************************
+// ******************************************************
 
-// ***************************
+
+
+// ******************************************************
+// Event listener for Reset Button ***************************
+// ******************************************************
+reset.addEventListener("click", function(){
+    //generate all new colors
+    colors = generateRandomColors(6);
+    //pick a new random color from array
+    pickedColor = pickColor();
+    //Change colorDisplay to match picked Color
+    colorDisplay.textContent = pickedColor;
+    //change colors of squares
+    for(var i = 0; i < squares.length; i++) {
+        //add innitial colors to square
+        squares[i].style.backgroundColor = colors[i];
+    }
+})
+// ******************************************************
+// ******************************************************
+
+
+
+
+
+
+// ******************************************************
 // ****** All Functions ******
-// ***************************
+// ******************************************************
 //all color changes to correct guessed color
 function changeColors(color) {
     //loop through all squares
@@ -82,5 +113,5 @@ function randomColor() {
     //return rgb(r,g,b)
     return "rgb(" + r + ", " + g + ", " + b + ")";
 }
-// ***************************
-// ***************************
+// ******************************************************
+// ******************************************************
