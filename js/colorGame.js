@@ -10,7 +10,10 @@ var display = document.getElementById("colorDisplay");
 display.textContent = pickedColor;
 
 var msg = document.getElementById("message");
+var h1 = document.querySelector("h1");
 // ***************************
+// ***************************
+
 
 // lets loop through colors
 for(var i = 0; i < squares.length; i++) {
@@ -27,6 +30,8 @@ for(var i = 0; i < squares.length; i++) {
             msg.textContent = "CORRECT!!";
             //Changing all squares to correct guessed color
             changeColors(clickedColor);
+            //change h1 to correct guessed color
+            h1.style.backgroundColor = clickedColor;
         } else {
             this.style.backgroundColor = "#232323";
             msg.textContent = "TRY AGAIN";
@@ -77,4 +82,5 @@ function randomColor() {
     //return rgb(r,g,b)
     return "rgb(" + r + ", " + g + ", " + b + ")";
 }
+// ***************************
 // ***************************
