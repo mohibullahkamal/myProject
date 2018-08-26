@@ -12,7 +12,13 @@ colorDisplay.textContent = pickedColor;
 var msg = document.getElementById("message");
 var h1 = document.querySelector("h1");
 var reset = document.getElementById("reset");
+var easyBtn = document.getElementById("easyBtn");
+var hardBtn = document.getElementById("hardBtn");
 // ******************************************************
+
+
+
+
 
 
 // ******************************************************
@@ -44,9 +50,14 @@ for(var i = 0; i < squares.length; i++) {
 // ******************************************************
 
 
+
+
+
+
 // ******************************************************
-// Event listener for Reset Button ***************************
+// **** All Event listeners *****************************
 // ******************************************************
+// Reset Button - event  
 reset.addEventListener("click", function(){
     //generate all new colors
     colors = generateRandomColors(6);
@@ -62,11 +73,23 @@ reset.addEventListener("click", function(){
         squares[i].style.backgroundColor = colors[i];
     }
 })
+
+// easyBtn - event 
+easyBtn.addEventListener("click", function(){
+    hardBtn.classList.remove("selected");
+    easyBtn.classList.add("selected");
+})
+
+// hardBtn - event
+hardBtn.addEventListener("click", function(){
+    easyBtn.classList.remove("selected");
+    hardBtn.classList.add("selected");
+})
 // ******************************************************
 
 
 // ******************************************************
-// ****** All Functions ******
+// ****** All Functions *********************************
 // ******************************************************
 //all color changes to correct guessed color
 function changeColors(color) {
