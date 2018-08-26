@@ -54,16 +54,13 @@ function pickColor(){
 }
 
 //Generates random colors for squares
-generateRandomColors(num){
+function generateRandomColors(num) {
     //make an array
     var arr = [];
-    //add num random colors to array
-    if (num === 6){
-        for(var = 0; i < num; i++) {
-            pickColor();
-    } else {
-        for(var = 0; i < num; i++) {
-            pickColor();
+    //repeat num times
+    for(var i = 0; i < num; i++) {
+        //get random color and push into arr
+        arr.push(randomColor());
     }
     //return that array
     return arr;
@@ -77,7 +74,7 @@ function randomColor() {
     var g = Math.floor(Math.random() * 256);
     //pick a "blue" from 0 - 255
     var b = Math.floor(Math.random() * 256);
-    //return rgb
+    //return rgb(r,g,b)
     return "rgb(" + r + ", " + g + ", " + b + ")";
 }
 // ***************************
