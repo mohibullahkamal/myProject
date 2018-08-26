@@ -15,7 +15,6 @@ var display = document.getElementById("colorDisplay");
 display.textContent = pickedColor;
 
 var msg = document.getElementById("message");
-
 // ***************************
 
 // lets loop through colors
@@ -30,24 +29,21 @@ for(var i = 0; i < squares.length; i++) {
         
         //compare color to pickedColor
         if(clickedColor === pickedColor) {
-            // for(var x = 0; x < colors.length; x++) {
-            //     colors[x].style.backgroundColor = "green";
-            // }
             msg.textContent = "CORRECT!!";
-
+            //Changing all squares to correct guessed color
+            changeColors(clickedColor);
         } else {
             this.style.backgroundColor = "#232323";
             msg.textContent = "TRY AGAIN";
         }
-});
+    });
 }
-
 
 //all color changes to correct guessed color
 function changeColors(color) {
     //loop through all squares
-    for(var i = 0; i < colors.length; i++) {
+    for(var i = 0; i < squares.length; i++) {
         //change each squares to match given color
-        colors[i].style.backgroundColor = color;
+        squares[i].style.backgroundColor = color;
     }
 }
