@@ -1,12 +1,6 @@
 //array of six colors
-var colors = [
-    "rgb(255, 0, 0)",
-    "rgb(255, 255, 0)",
-    "rgb(0, 255, 0)",
-    "rgb(0, 255, 255)",
-    "rgb(0, 0, 255)",
-    "rgb(255, 0, 255)"
-]
+var colors = generateRandomColors(6);
+
 // ***************************
 // ****** All Variables ******
 // ***************************
@@ -55,7 +49,35 @@ function changeColors(color) {
 //Randomly picks a color
 function pickColor(){
     //Math.floor return whole no. and Math.random returns random no. ....along with "* 6" returns any no. between 0,1,2,3,4,5 
-    var randomNum = Math.floor(Math.random() * colors.length);
-    return colors[randomNum];
+    var random = Math.floor(Math.random() * colors.length);
+    return colors[random];
+}
+
+//Generates random colors for squares
+generateRandomColors(num){
+    //make an array
+    var arr = [];
+    //add num random colors to array
+    if (num === 6){
+        for(var = 0; i < num; i++) {
+            pickColor();
+    } else {
+        for(var = 0; i < num; i++) {
+            pickColor();
+    }
+    //return that array
+    return arr;
+}
+
+//randomColor generator
+function randomColor() {
+    //pick a "red" from 0 - 255
+    var r = Math.floor(Math.random() * 256);
+    //pick a "green" from 0 - 255
+    var g = Math.floor(Math.random() * 256);
+    //pick a "blue" from 0 - 255
+    var b = Math.floor(Math.random() * 256);
+    //return rgb
+    return "rgb(" + r + ", " + g + ", " + b + ")";
 }
 // ***************************
