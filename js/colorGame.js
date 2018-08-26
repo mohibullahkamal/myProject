@@ -30,6 +30,7 @@ for(var i = 0; i < squares.length; i++) {
         //compare color to pickedColor
         if(clickedColor === pickedColor) {
             msg.textContent = "CORRECT!!";
+            reset.textContent = "Play Again?";
             //Changing all squares to correct guessed color
             changeColors(clickedColor);
             //change h1 to correct guessed color
@@ -53,7 +54,7 @@ reset.addEventListener("click", function(){
     pickedColor = pickColor();
     //Change colorDisplay to match picked Color
     colorDisplay.textContent = pickedColor;
-    //change h1 color
+    //change h1 color to original
     h1.style.backgroundColor = "#232323";
     //change colors of squares
     for(var i = 0; i < squares.length; i++) {
