@@ -13,7 +13,6 @@ var msg = document.getElementById("message");
 var h1 = document.querySelector("h1");
 var reset = document.getElementById("reset");
 // ******************************************************
-// ******************************************************
 
 
 // ******************************************************
@@ -42,8 +41,6 @@ for(var i = 0; i < squares.length; i++) {
     });
 }
 // ******************************************************
-// ******************************************************
-
 
 
 // ******************************************************
@@ -56,6 +53,8 @@ reset.addEventListener("click", function(){
     pickedColor = pickColor();
     //Change colorDisplay to match picked Color
     colorDisplay.textContent = pickedColor;
+    //change h1 color
+    h1.style.backgroundColor = "#232323";
     //change colors of squares
     for(var i = 0; i < squares.length; i++) {
         //add innitial colors to square
@@ -63,11 +62,6 @@ reset.addEventListener("click", function(){
     }
 })
 // ******************************************************
-// ******************************************************
-
-
-
-
 
 
 // ******************************************************
@@ -113,5 +107,4 @@ function randomColor() {
     //return rgb(r,g,b)
     return "rgb(" + r + ", " + g + ", " + b + ")";
 }
-// ******************************************************
 // ******************************************************
