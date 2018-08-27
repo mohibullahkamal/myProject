@@ -19,8 +19,6 @@ var hardBtn = document.getElementById("hardBtn");
 
 
 
-
-
 // ******************************************************
 // lets loop through colors***************************
 // ******************************************************
@@ -29,7 +27,7 @@ for(var i = 0; i < squares.length; i++) {
     squares[i].style.backgroundColor = colors[i];
 
     //add click listeners to squares
-    squares[i].addEventListener("click", function(){
+    squares[i].addEventListener("click", function() {
         //grab color of clicked square
         var clickedColor = this.style.backgroundColor;
         
@@ -52,13 +50,11 @@ for(var i = 0; i < squares.length; i++) {
 
 
 
-
-
 // ******************************************************
 // **** All Event listeners *****************************
 // ******************************************************
 // Reset Button - event  
-reset.addEventListener("click", function(){
+reset.addEventListener("click", function() {
     //generate all new colors
     colors = generateRandomColors(6);
     //pick a new random color from array
@@ -75,13 +71,22 @@ reset.addEventListener("click", function(){
 })
 
 // easyBtn - event 
-easyBtn.addEventListener("click", function(){
+easyBtn.addEventListener("click", function() {
     hardBtn.classList.remove("selected");
     easyBtn.classList.add("selected");
+    colors = generateRandomColors(3);
+    pickedColor = pickColor();
+    colorDisplay.textContent = pickedColor;
+    for(var i = 0; i < squares.length; i++) {
+        if(colors[i]) { 
+            squares[i].style.background = colors[i];
+
+        }
+    }
 })
 
 // hardBtn - event
-hardBtn.addEventListener("click", function(){
+hardBtn.addEventListener("click", function() {
     easyBtn.classList.remove("selected");
     hardBtn.classList.add("selected");
 })
@@ -101,7 +106,7 @@ function changeColors(color) {
 }
 
 //Randomly picks a color
-function pickColor(){
+function pickColor() {
     //Math.floor return whole no. and Math.random returns random no. ....along with "* 6" returns any no. between 0,1,2,3,4,5 
     var random = Math.floor(Math.random() * colors.length);
     return colors[random];
