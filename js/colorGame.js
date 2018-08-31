@@ -80,7 +80,6 @@ easyBtn.addEventListener("click", function() {
     for(var i = 0; i < squares.length; i++) {
         if(colors[i]) { 
             squares[i].style.background = colors[i];
-
         }
     }
 })
@@ -125,15 +124,6 @@ function generateRandomColors(num) {
     return arr;
 }
 
-//randomColor generator
-function randomColor() {
-    //pick a "red" from 0 - 255
-    var r = Math.floor(Math.random() * 256);
-    //pick a "green" from 0 - 255
-    var g = Math.floor(Math.random() * 256);
-    //pick a "blue" from 0 - 255
-    var b = Math.floor(Math.random() * 256);
-    //return rgb(r,g,b)
-    return "rgb(" + r + ", " + g + ", " + b + ")";
+
 }
 // ******************************************************
