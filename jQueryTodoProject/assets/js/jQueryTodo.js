@@ -1,11 +1,11 @@
-//Check Off Specific Todos By Clicking
-$("li").click(function() {
+//Check Off Specific Todos By Clicking --> we are using .on() instead of .click(); thats because want to include this feature of ul to all the rest of newly added instances later on...
+$("ul").on("click", "li", function() {
     //Toggles from on and off state
     $(this).toggleClass("completed");
 });
 
-//Click on X to delete Todo
-$("span").click(function(event) {
+//Click on X to delete Todo --> we are using .on() instead of .click(); thats because want to include this feature of ul to all the rest of newly added instances later on...
+$("ul").on("click", "span", function(event) {
     //setting 500ms for fading out; and then removing it out
     $(this).parent().fadeOut(500, function() {
         $(this).remove();
@@ -15,6 +15,14 @@ $("span").click(function(event) {
 });
 
 //Create new Todos
-$("input[type='text']").keypress(function() {
-    console.log("hrhrhrhr");
+$("input[type='text']").keypress(function(event) {
+    //Only when you click enter === 13, thats when the event is gonna be fired
+    if(event.which === 13) {
+        //grabbing new todo text from input
+        var todoText = $(this).val();
+        $(this).val("");
+        //create a new li and add to ul
+        $("ul").append("<li><span>X</span> "+
+            todoText +"</li>")
+    }
 });
