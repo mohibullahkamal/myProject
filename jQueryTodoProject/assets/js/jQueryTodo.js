@@ -7,7 +7,7 @@ $("ul").on("click", "li", function() {
 //Click on X to delete Todo --> we are using .on() instead of .click(); thats because want to include this feature of ul to all the rest of newly added instances later on...
 $("ul").on("click", "span", function(event) {
     //setting 500ms for fading out; and then removing it out
-    $(this).parent().fadeOut(500, function() {
+    $(this).parent().fadeOut(200, function() {
         $(this).remove();
     });
     //stopPropogation stops the general problem of "Bubble Effect" which is when <span> is clicked all parents upto head is fired respectively... we dont want that
