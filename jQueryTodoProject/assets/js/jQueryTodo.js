@@ -26,3 +26,8 @@ $("input[type='text']").keypress(function(event) {
             todoText +"</li>")
     }
 });
+
+//make the input box appear when plus sign clicked otherwise disappear
+$(".fa-plus").click(function() {
+    $("input[type='text']").fadeToggle();
+});
