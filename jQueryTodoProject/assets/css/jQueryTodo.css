@@ -29,7 +29,7 @@ ul {
 li {
     background: #fff;
     height: 40px;
-    line-height: 40px;
+    line-height: 0px;
     color: #666;
 }
 
@@ -39,7 +39,7 @@ li:nth-child(2n) {
 
 li :hover span {
     width: 40px;
-    opacity: 1.0;
+    /* opacity: 1.0; */
 }
 
 span {
