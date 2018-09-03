@@ -1,13 +1,11 @@
 body {
-    background: -webkit-linear-gradient(90deg, #2BC0E4 10%, #EAECA8 90%);
-    background:    -moz-linear-gradient(90deg, #2BC0E4 10%, #EAECA8 90%);
-    background:     -ms-linear-gradient(90deg, #2BC0E4 10%, #EAECA8 90%);
-    background:      -o-linear-gradient(90deg, #2BC0E4 10%, #EAECA8 90%);
-    background:         linear-gradient(90deg, #2BC0E4 10%, #EAECA8 90%);
+    background: #833ab4;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #fcb045, #fd1d1d, #833ab4);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #fcb045, #fd1d1d, #833ab4); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 h1 {
-    background: #2980b9;
+    background: black;
     color: white;
     margin: 0;
     padding: 10px 20px;
@@ -29,7 +27,7 @@ ul {
 li {
     background: #fff;
     height: 40px;
-    line-height: 0px;
+    line-height: 40px;
     color: #666;
 }
 
@@ -37,21 +35,21 @@ li:nth-child(2n) {
     background: #f7f7f7;
 }
 
-li :hover span {
+li:hover span {
     width: 40px;
-    /* opacity: 1.0; */
+    opacity: 1.0;
 }
 
 span {
     background: #e74c3c;
     height: 40px;
-    margin: 20px;
+    margin-right: 20px;
     text-align: center;
     color: white;
     width: 0;
     display: inline-block;
     transition: 0.2s linear;
-    opacity: 0;
+    opacity: 0; 
 }
 
 input {
@@ -67,7 +65,7 @@ input {
 /* this makes the annoying inputBox highlight disappear when not selected */
 input:focus {
     background: #fff;
-    border: 3px solid #2980b9;
+    border: 5px solid #2980b9;
     outline: none;
 }
 
