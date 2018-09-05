@@ -9,13 +9,13 @@ app.get("/", function(req, res) {
 
 // "/bye" => "Goodbye!!"
 app.get("/bye", function(req, res){
-   console.log("SOMEONE MADE A REQUEST TO /bye..!!")
+   console.log("SOMEONE MADE A REQUEST TO /bye..!!");
    res.send("GoodBye...Have a nice day :)!!");
 })
 
 // "/dog" => "MEOW!!"
 app.get("/dog", function(req, res){
-   console.log("SOMEONE MADE A REQUEST TO /dog..!!")
+   console.log("SOMEONE MADE A REQUEST TO /dog..!!");
    res.send("MEOW..!!");
 })
 
@@ -23,4 +23,8 @@ app.get("/dog", function(req, res){
 app.listen(process.env.PORT, process.env.IP, function(){
    console.log("Server has started!!");
 });
+
+
+
+
 
