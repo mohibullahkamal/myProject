@@ -12,7 +12,6 @@ app.get("/like/:thing", function(req, res) {
    res.render("love.ejs", {nameVar: name}); // {}-this is an object... so basically we are passing nameVar through an object... so it gets identified by love.ejs file...
 });
 
-
 app.get("/posts", function(req, res){
     var posts = [
         {title: "Post 1", author: "Susy"},
