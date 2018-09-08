@@ -1,7 +1,11 @@
 var express = require("express");
 var app = express();
+var bodyParser = require("body-parser");
 
+app.use(bodyParser.urlencoded({extended: true})); // go read in body-parser docs about what urlencoder does...
 app.set("view engine", "ejs");
+
+var friends = ["Tony", "Miranda", "Justin", "MOHIB"];
 
 
 app.get("/", function(req, res) {
@@ -10,16 +14,19 @@ app.get("/", function(req, res) {
 });
 
 app.get("/friends", function(req, res) {
-    var friends = ["Tony", "Miranda", "Justin", "MOHIB"];
     console.log("User requested Friend List...");
     res.render("friends", {friends: friends});
 });
 
-// this a POST request ... used when add data to App...
+// this is a POST request ... use it when add data to App...
 app.post("/addfriend", function(req, res) {
-   res.send("YOU HAVE REACHED THE POST ROUTE..!!") 
+    var newfriend = req.body.newfriend;
+    friends.push(newfriend);
+    
+    console.log("User Posted an AddFriend request...");
+    // res.send("YOU HAVE REACHED THE POST ROUTE..!!"); // we dont want to see this message.. instead we want to see what name we added.. so we use the below code instead
+    res.redirect("/friends"); // "redirect"--> is new...instead of resend we use redirect....  this gives us back the updates page with new friend added....
 });
-
 
 
 
