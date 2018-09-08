@@ -1,15 +1,16 @@
 <link rel="stylesheet" href="app.css">
 
+
 <h1>The Posts Page</h1>
 
-
+<!-- Using "for" loops... -->
 <% for(var i = 0; i < posts.length; i++){ %>
     <li>
         <%= posts[i].title; %> --> <strong><%= posts[i].author; %></strong>
     </li>
 <% } %>
 
-
+<!-- Just another way of doing loops...-->
 <% posts.forEach(function(post){ %>
     <li>
         <%= post.title %> --> <strong><%= post.author %></strong>
