@@ -15,6 +15,10 @@ app.get("/friends", function(req, res) {
     res.render("friends", {friends: friends});
 });
 
+// this a POST request ... used when add data to App...
+app.post("/addfriend", function(req, res) {
+   res.send("YOU HAVE REACHED THE POST ROUTE..!!") 
+});
 
 
 
