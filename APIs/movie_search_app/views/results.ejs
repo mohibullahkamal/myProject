@@ -1,13 +1,16 @@
 <h1> 10 Movie by search: </h1>
+<a href="/">Search Again!!</a>
 
-
-    <% data["Search"].forEach(function(movie) { %>
-        <h2>
-            <img height=100px src="<%= movie["Poster"]; %>">
-            <strong><%= movie["Title"]; %></strong> - 
-                <em>{<%= movie["Year"] %>}</em>
-        </h2>
-    <% }); %>
-
+    <ol><font size="5">
+        <% data["Search"].forEach(function(movie) { %>
+            <li>
+                <img height=150px src="<%= movie["Poster"]; %>">
+                <strong><%= movie["Title"]; %></strong> - 
+                    <em>{<%= movie["Year"] %>}</em>
+                <br/> 
+           </li>
+            ------------------------------------------------------------------------------
+        <% }); %>
+     </font></ol>
 
 <a href="/">Search Again!!</a>
