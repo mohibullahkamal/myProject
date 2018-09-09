@@ -10,7 +10,7 @@ app.get("/results", function(req, res) {
     request("http://www.omdbapi.com/?apikey=3f2f6179&&&s=fast", function(error, response, body) {
         if (!error && response.statusCode == 200) {
             var data = JSON.parse(body);
-            res.render("render", {data: data});
+            res.render("results", {data: data});
             //res.send(results["Search"][0]["Title"]); // remember res.send can only be used once...
         }
     });
