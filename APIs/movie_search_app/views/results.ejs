@@ -1,8 +1,11 @@
-<h1> THIS IS THE RESULTS PAGE !! </h1>
+<h1> 10 Movie names: </h1>
 
-<% data["Search"].forEach(function(movie) { %>
-    <li>
-        <%= movie["Title"] %>
-    </li>
-<% }) %>
+<ul>
+    <% data["Search"].forEach(function(movie) { %>
+        <li>
+            <strong><%= movie["Title"]; %></strong> - 
+                <em>{<%= movie["Year"] %>}</em>
+        </li>
+    <% }); %>
+</ul>
 

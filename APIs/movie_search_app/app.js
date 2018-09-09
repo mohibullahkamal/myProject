@@ -6,8 +6,15 @@ var request = require("request");
 app.set("view engine", "ejs");
 
 
+app.get("/", function(req, res) {
+   res.render("search"); 
+});
+
 app.get("/results", function(req, res) {
-    request("http://www.omdbapi.com/?apikey=3f2f6179&&&s=fast", function(error, response, body) {
+    var query = req.query.search; // this command give you the value from the url... 
+    var urlData = "http://www.omdbapi.com/?apikey=3f2f6179&&&s=" + query;
+    
+    request(urlData, function(error, response, body) {
         if (!error && response.statusCode == 200) {
             var data = JSON.parse(body);
             res.render("results", {data: data});
@@ -15,8 +22,6 @@ app.get("/results", function(req, res) {
         }
     });
 });
-
-
 
 
 
