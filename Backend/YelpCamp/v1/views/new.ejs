@@ -1,0 +1,18 @@
+<% include partials/header %>   <!-- "include" tag is an ejs tag... use it to include other .ejs files... don't add "=" after '<.%'... don't add "/" before "partials" path...-->
+
+    <h1>Create a New Campground</h1>
+    
+    <form action="/campgrounds" method="POST"> <!-- "Here '/campgrounds' refer to "app.post("/campgrounds", func...)", and also you can see 'method="POST"'  ... so it will then add to campgrounds ARRAY.. " -->
+        <input type="text" name="name" placeholder="name">   <!-- We use the 'name' attribute inside our route inorder to grab the data from the "Request.body" command which you will find in "app.js" under "app.post(...)"...  -->
+        <input type="text" name="image" placeholder="Image url"> 
+        <button>Submit!</button>
+    </form>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <a href="/campgrounds">View All Campgrounds</a>
+    <br/>
+    <a href="/">Home</a>   <!-- to go back to "landing.ejs"... it refers to what was assigned in "app.get("/", func...)" .. and not "landing"... I made that mistake... -->
+
+<% include partials/footer %>
