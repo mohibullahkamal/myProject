@@ -1,18 +1,16 @@
 <% include partials/header %>   <!-- "include" tag is an ejs tag... use it to include other .ejs files... don't add "=" after '<.%'... don't add "/" before "partials" path...-->
 
-<h1>This is the CampGrounds page</h1>
-<a href="/">Home</a>   <!-- to go back to "landing.ejs"... it refers to what was assigned in "app.get("/", func...)" .. and not "landing"... I made that mistake... -->
+    <h1>This is the CampGrounds page</h1>
+    <a href="/">Home</a>   <!-- to go back to "landing.ejs"... it refers to what was assigned in "app.get("/", func...)" .. and not "landing"... I made that mistake... -->
 
-
-<% campgrounds.forEach(function(campground){ %>   <!-- for looping through "campgrounds" array, we use "forEach()" -->
-    <div>
-        <h4><%= campground.name %></h4>
-        <img height=200px src="<%= campground.image %>">
-        <br/>
-        <br/>
-        --------------------------------------------------------
-    </div>
-<% }); %>
+    <% campgrounds.forEach(function(campground){ %>   <!-- for looping through "campgrounds" array, we use "forEach()" -->
+        <div>
+            <h4><%= campground.name %></h4>
+            <img height=200px src="<%= campground.image %>">
+            <br/>
+            <br/>
+            --------------------------------------------------------
+        </div>
+    <% }); %>
 
 <% include partials/footer %>
-

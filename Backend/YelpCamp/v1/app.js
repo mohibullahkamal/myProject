@@ -1,7 +1,9 @@
 var express = require("express");
 var app = express();
+var bodyParser = require("body-parser");
 
-app.set("view engine", "ejs");   // no longer ".ejs" extension required when function files in this project
+app.use(bodyParser.urlencoded({extended: true}));   //"app.use()"--> helps us to tell ***Express to use "boby-parser"... we also need to ".urlencoded" and pass in an "object-> {}" ... just memorize it... we will be needed it a lot...
+app.set("view engine", "ejs");   //no longer ".ejs" extension required when function files in this project
 
 // home page
 app.get("/", function(req, res){
@@ -10,7 +12,7 @@ app.get("/", function(req, res){
     res.render("landing");
 });
 
-// redirect to "/campground" page
+// re-direct to "/campground" page
 app.get("/campgrounds", function(req, res){
     console.log("User Requested campGround page...");
     var campgrounds = [   // array containing starter Objects... which holds data... later we will relocate these data to a Database...
@@ -21,11 +23,11 @@ app.get("/campgrounds", function(req, res){
     res.render("campgrounds", {campgrounds: campgrounds});   // [1st-campgrounds] --> renders the "views/campgrounds.ejs" file  //we use {} to indicate all the data that we want to pass... [2nd-campgrounds] --> is refering to the file name "campgrounds.ejs"... [3rd-campgrounds] --> is refering to the "var" named "campgrounds"
 });
 
-app.post("/campgrounds", function(req, res){
+app.post("/campgrounds", function(req, res){   // "app.post()" command is used to post data, as opposed to "app.get()"
     console.log("User Posted campGround...");
+    res.send("YOU HIT THE POST ROUTE!!");   // lets go test in Postman, whether our App is sending out a post command...
        //get data from Form and add to campgrounds array
        //redirect back to campgrounds page
-   
 });
 
 
