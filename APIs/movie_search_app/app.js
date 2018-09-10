@@ -28,5 +28,5 @@ app.get("/results", function(req, res) {
 
 // App in listening
 app.listen(process.env.PORT, process.env.ID, function(req, res){
-    console.log("Movie App has started !!");
+    console.log("MovieApp Server has started !!");
 });
