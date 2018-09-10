@@ -12,19 +12,20 @@
                 </p>
             </div>        
         </header>
-        <div class="row">
-            <div class="col-lg-12">
-                <h3>Our Most Popular Campgrounds!</h3>
-            </div>
-        </div>
+        <!--<div class="row">-->
+        <!--    <div class="col-lg-12">-->
+        <!--        <h3>Our Most Popular Campgrounds!</h3>-->
+        <!--    </div>-->
+        <!--</div>-->
         <div class="row">
             <% campgrounds.forEach(function(campground){ %>   <!-- for looping through "campgrounds" array, we use "forEach()" -->
-                <div>
-                    <h4><%= campground.name %></h4>
-                    <img height=200px src="<%= campground.image %>">
-                    <br/>
-                    <br/>
-                    --------------------------------------------------------
+                <div class="col-md-3 col-sm-6">   <!-- Just to make it responsive; when medium then show 3 images else when small show 2 in a row...and 1 image per row when very small... -->
+                    <div class="thumbnail">
+                        <img height=200px src="<%= campground.image %>">
+                        <div class="caption">
+                            <h4><%= campground.name %></h4>
+                        </div>
+                    </div>
                 </div>
             <% }); %>
         </div>
