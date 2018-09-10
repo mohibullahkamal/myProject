@@ -12,7 +12,12 @@
                 </p>
             </div>        
         </header>
-        
+        <div class="row">
+            <div class="col-lg-12">
+                <h3>Our Most Popular Campgrounds!</h3>
+            </div>
+        </div>
+        <div class="row">
             <% campgrounds.forEach(function(campground){ %>   <!-- for looping through "campgrounds" array, we use "forEach()" -->
                 <div>
                     <h4><%= campground.name %></h4>
@@ -22,10 +27,11 @@
                     --------------------------------------------------------
                 </div>
             <% }); %>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
+            
+        </div>
     </div>
-    
+<br/>
+<br/>
+<br/>
+<br/>
 <% include partials/footer %>
