@@ -1,22 +1,31 @@
 <% include partials/header %>   <!-- "include" tag is an ejs tag... use it to include other .ejs files... don't add "=" after '<.%'... don't add "/" before "partials" path...-->
 
-    <h1 >This is the CampGrounds page</h1>
-    <a href="/">Home</a>   <!-- to go back to "landing.ejs"... it refers to what was assigned in "app.get("/", func...)" .. and not "landing"... I made that mistake... -->
-    <br/>
-    <a href="/campgrounds/new">Add New Campground</a>
-
-    <% campgrounds.forEach(function(campground){ %>   <!-- for looping through "campgrounds" array, we use "forEach()" -->
-        <div>
-            <h4><%= campground.name %></h4>
-            <img height=200px src="<%= campground.image %>">
+    <div class="container">   <!-- Put all content inside Bootstrap's "container" for adding nice padding on both sides... -->
+        <header class="jumbotron">
+            <div class="jumbotron">   <!-- container within container because we realized that when window resized, the title of head moves to left edge... we want it to not push left edge -->
+                <h1 >Welcome to YelpCamp!!</h1>
+                <p>View our haand-picked campgrounds from all over the world</p>
+                
+                <p> 
+                    <a class="btn btn-primary btn-large" href="/">Home</a>   <!-- to go back to "landing.ejs"... it refers to what was assigned in "app.get("/", func...)" .. and not "landing"... I made that mistake... -->
+                    <a class="btn btn-primary btn-large" href="/campgrounds/new">Add New Campground</a>
+                </p>
+            </div>        
+        </header>
+        
+            <% campgrounds.forEach(function(campground){ %>   <!-- for looping through "campgrounds" array, we use "forEach()" -->
+                <div>
+                    <h4><%= campground.name %></h4>
+                    <img height=200px src="<%= campground.image %>">
+                    <br/>
+                    <br/>
+                    --------------------------------------------------------
+                </div>
+            <% }); %>
             <br/>
             <br/>
-            --------------------------------------------------------
-        </div>
-    <% }); %>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
+            <br/>
+            <br/>
+    </div>
     
 <% include partials/footer %>
