@@ -3,7 +3,7 @@
     <div class="container">
         <div class="row">
             <h1 style="text-align: center">Create a New Campground</h1>   <!-- Colt advised not to do inline style but I did it more quick fix... want to center "Heading" -->
-            <div style="width: 30%; margin: 0 auto">   <!-- Colt advised not to inline style but for the time being we use it.... -->
+            <div style="width: 30%; margin: 40px auto">   <!-- Colt advised not to inline style but for the time being we use it.... -->
                 <form action="/campgrounds" method="POST"> <!-- "Here '/campgrounds' refer to "app.post("/campgrounds", func...)", and also you can see 'method="POST"'  ... so it will then add to campgrounds ARRAY.. " -->
                     <div class="form-group">
                         <!-- Name text box -->
@@ -15,17 +15,15 @@
                     </div>
                     <div class="form-group">
                         <!-- Submit button -->
-                         <button class="btn btn-lg btn-default btn-block">Submit!</button>
+                         <button class="btn btn-lg btn-primary btn-block">Submit!</button>
                     </div>
                 </form>
+                <br/>
+                <a href="/campgrounds">View All Campgrounds</a>
+                <br/>
+                <br/>
+                <a href="/">Home</a>   <!-- to go back to "landing.ejs"... it refers to what was assigned in "app.get("/", func...)" .. and not "landing"... I made that mistake... -->
             </div>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <a href="/campgrounds">View All Campgrounds</a>
-            <br/>
-            <a href="/">Home</a>   <!-- to go back to "landing.ejs"... it refers to what was assigned in "app.get("/", func...)" .. and not "landing"... I made that mistake... -->
         </div>
     </div>
 
