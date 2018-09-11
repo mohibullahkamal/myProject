@@ -9,21 +9,21 @@ var catSchema = new mongoose.Schema({   //ALWAYS USE this way when assigning a v
 
 //"var Cat" and "("Cat", ..)" are not the same... Mongoose smartly turns "Cat" to "cats" COLLECTION --> which will look "db.cats"  !!!!!
 //The "Cat" with capital C must always be singular version of the property name... Mongoose will create a COLLECTION called "cats"... Mongoos is pretty smart as to how it pluralizes things...
-var Cat = mongoose.model("Cat", catSchema)   //We took the "catSchema" and compiled it into a model AND WE SAVE to a var "Cat"; and now we can use that "Cat" variable no make new/find/update/remove cats...... Now taht we made "catSchema" Mongoose understandable...Now we are modelling it it Mongoose so we could manipulate "catSchema" data...
+var Cat = mongoose.model("Cat", catSchema)  ; //We took the "catSchema" and compiled it into a model AND WE SAVE to a var "Cat"; and now we can use that "Cat" variable no make new/find/update/remove cats...... Now taht we made "catSchema" Mongoose understandable...Now we are modelling it it Mongoose so we could manipulate "catSchema" data...
 
 //adding a new cat to the DB
 var george = new Cat({
     name: "George",
     age: 11,
     temperament: "Grouchy"
-})
+});
 
-george.save(function(err, cat){
+george.save(function(err, cat){   // This is a call back function.. //we are trying to save George to DB... We will be using this format all the time so no worries you will get familiar with it... will use it with .find(), .remove()....etc
     if (err){
-        console.log("SOMETHING WENT WRONG!!")
+        console.log("SOMETHING WENT WRONG!!");
     } else {
-        console.log("WE JUST SAVED CAT TO DB:")
-        console.log(cat);
+        console.log("WE JUST SAVED CAT TO DB:");
+        console.log(cat);   //
     }
 });
 
