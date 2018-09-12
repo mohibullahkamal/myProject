@@ -18,7 +18,7 @@ var george = new Cat({
     temperament: "Grouchy"
 });
 
-george.save(function(err, cat){   // This is a call back function.. //we are trying to save George to DB... We will be using this format all the time so no worries you will get familiar with it... will use it with .find(), .remove()....etc
+george.save(function(err, cat){   // This is a call back function once cat is added to DB.... //we are trying to save George to DB... We will be using this format all the time so no worries you will get familiar with it... will use it with .find(), .remove()....etc
     if (err){
         console.log("SOMETHING WENT WRONG!!");
     } else {

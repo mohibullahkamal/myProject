@@ -22,7 +22,7 @@ var campgrounds = [   // array containing starter Objects... which holds data...
 app.get("/", function(req, res){
     // res.send("this will be the landing page soon...!!");   //used to test server connection... abondoned it for res.render("landing")...
     console.log("User Requested Home page...");
-    res.render("landuseing");
+    res.render("landing");
 });
 
 // re-direct to "/campground" page

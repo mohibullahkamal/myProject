@@ -6,4 +6,4 @@ function echo (str, num) {
 
 echo("Echo!!!", 10); //Print Echo!!! 10 times
 echo("Tater Tots", 3); //Print 3 times
-pwd
+
