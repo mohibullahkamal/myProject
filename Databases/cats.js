@@ -7,16 +7,16 @@
 //    - Saving--> ".save" it
 //    - And having a callback to check for error..
 
-// MAIN CONCEPTS:
-// Intall Mongoose --> Connect to DB --> Schema --> Model --> Interact with DB[Create, find]... 
+// *** MAIN CONCEPTS:
+// (1)Intall Mongoose --> (2)Connect DB --> (3)set Schema --> (4)compile Model --> (5)Interact with DB[Create, find]... 
 
 //**********************************************************
 
 
-
 var mongoose = require("mongoose");
-mongoose.connect("mongodb://localhost/cat_app" );   //We need to connect to MongoDB... lets start the "./mongod" server... then in the "mongoose.connect(...)"... we add the DB name... if we havent created the DB mentioned then mongoose creates it for us automatically...
+mongoose.connect("mongodb://localhost/cat_app");   //We need to connect to MongoDB... lets start the "./mongod" server... then in the "mongoose.connect(...)"... we add the DB name... if we havent created the DB mentioned then mongoose creates it for us automatically...
 
+// SCHEMA SETUP - mongoose
 var catSchema = new mongoose.Schema({   //ALWAYS USE this way when assigning a var, which will be used in MongoDB.... Couple of new commands come with mongoose that we have to learn... we are assigning "catSchema" a "mongoose.Schema" to turn to mongroose understandable code... You might asking why in noSQL we are defining a structure; well we are defining it because to give our data a good structure which will be easy to call later...
    name: String,
    age: Number,
