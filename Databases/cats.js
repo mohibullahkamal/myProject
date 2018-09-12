@@ -73,3 +73,6 @@ Cat.find({}, function(err, cats){   //In "cats.find({}, function(..., ...)" here
         console.log(cats);
     }
 });
+
+
+
