@@ -29,3 +29,8 @@
 #### ..* Setup Campground model
 #### ..* Use Campground model inside of our routes
 
+8. Show Page
+ ..* Reviewed the RESTful routes we've seen so far 
+ ..* Add description to our campground model
+ ..* Show db.collection.drop()
+ ..* Add a show route/template
