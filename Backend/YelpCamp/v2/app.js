@@ -7,9 +7,9 @@ var mongoose   = require("mongoose");
 // ******* Connect DB *********************************
 mongoose.connect("mongodb://localhost/yelp_camp");   //here "yelp_camp" is the db name we create in mongodb...
 // ****************************************************
-    
 app.use(bodyParser.urlencoded({extended: true}));   //"app.use()"--> helps us to tell ***Express to use "boby-parser"... we also need to ".urlencoded" and pass in an "object-> {}" ... just memorize it... we will be needed it a lot...
 app.set("view engine", "ejs");   //no longer ".ejs" extension required when function files in this project
+
 
 // ******* SCHEMA SETUP-mongoose **********************
 var campgroundSchema = new mongoose.Schema({
@@ -18,9 +18,11 @@ var campgroundSchema = new mongoose.Schema({
 });   //refer to cats.js in Database folder for more details
 // ****************************************************
 
+
 // ******* Compile campground model *******************
-var Campground = mongoose.model("Campground", campgroundSchema);
+var Campground = mongoose.model("Campground", campgroundSchema);   //this where the SCHEMA is turned into a MODEL for later use... MongoDB is using smart libraries to turn the singular word "Campground" to --> "Campgrounds"... check later in database
 // ****************************************************
+
 
 // home page
 app.get("/", function(req, res){
@@ -46,8 +48,8 @@ app.get("/campgrounds", function(req, res){
 app.post("/campgrounds", function(req, res){   // "app.post()" command is used to post data, as opposed to "app.get()"
     console.log("User Posted on campGround...");
     //res.send("YOU HIT THE POST ROUTE!!");   // lets go test in Postman, whether our App is sending out a post command...
-    var name = req.body.name;   //get data from Form and add to campgrounds array
-    var image = req.body.image;   //get data from Form and add to campgrounds array
+    var name = req.body.name;   //grabbibg data from Form and add to campgrounds array
+    var image = req.body.image;   //grabbibg data from Form and add to campgrounds array
     var newCampground = {name: name, image: image};   //making object to be used by "campground[] array..."
     
     // campgrounds.push(newCampground);   // We will delete this for now... //we push a new "campground" in the "campgrounds[]" array... but we need to push in an Object.. so lets make that Object with "var"... lets call it "newCampgound"... 
