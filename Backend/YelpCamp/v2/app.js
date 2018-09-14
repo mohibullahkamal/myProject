@@ -33,6 +33,7 @@ app.get("/", function(req, res){
 
 
 // re-direct to "/campground" page... // get all data from DB...
+//***(1) INDEX -> RESTful route -> show all campgrounds
 app.get("/campgrounds", function(req, res){
     // Get all campgrounds from DB
     Campground.find({}, function(err, allCampgrounds){
@@ -44,7 +45,7 @@ app.get("/campgrounds", function(req, res){
     });
 });
 
-
+//***(2) CREATE -> RESTful route -> add new campground to DB
 app.post("/campgrounds", function(req, res){   // "app.post()" command is used to post data, as opposed to "app.get()"
     console.log("User Posted on campGround...");
     //res.send("YOU HIT THE POST ROUTE!!");   // lets go test in Postman, whether our App is sending out a post command...
@@ -64,13 +65,16 @@ app.post("/campgrounds", function(req, res){   // "app.post()" command is used t
     });
 });
 
-
+//***(3) NEW -> RESTful route -> show form to create new campground
 app.get("/campgrounds/new", function(req, res){   //RESTful convention of "/campgrounds/new" is followed... This will basically send the data to the "app.post("/campgrounds", function()...)"
    console.log("User Requested Newly Added Data");
    res.render("new");
 });
 
-
+//***(4) SHOW -> RESTful route -> shows info about one dog
+app.get("/campgrounds/:id", function(req, res){
+    res.send("THIS WILL BE THE **SHOW** PAGE ONE DAY!!");
+});
 
 
 
