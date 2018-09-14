@@ -14,7 +14,8 @@ app.set("view engine", "ejs");   //no longer ".ejs" extension required when func
 // ******* SCHEMA SETUP-mongoose **********************
 var campgroundSchema = new mongoose.Schema({
     name: String,
-    image: String
+    image: String,
+    description: String
 });   //refer to cats.js in Database folder for more details
 // ****************************************************
 
@@ -72,9 +73,16 @@ app.get("/campgrounds/new", function(req, res){   //RESTful convention of "/camp
 });
 
 //***(4) SHOW -> RESTful route -> shows info about one dog
-app.get("/campgrounds/:id", function(req, res){
+app.get("/campgrounds/:id", function(req, res){   //***ORDER of the ROUTE matter... If I switch places to top -> ":id" with "/campgrounds" then the later will not get executed..
+    //find campground with provided "id"
+    
+    //render show template with that campground 
+    
     res.send("THIS WILL BE THE **SHOW** PAGE ONE DAY!!");
 });
+
+
+
 
 
 
@@ -92,20 +100,25 @@ app.listen(process.env.PORT, process.env.IP, function(){
 });
 
 
+// *****************************************
+// *****************************************
 
-// Campground.create(   //Trying out data entry testing... was successful
-//     {
-//     name: "green brush",
-//     image: "https://images.pexels.com/photos/699558/pexels-photo-699558.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=350"
+
+
+Campground.create(   //Trying out data entry testing... was successful
+    {
+    name: "green brush",
+    image: "https://images.pexels.com/photos/699558/pexels-photo-699558.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=350",
+    description: "This is a huge mountain with stunning scenery. Weather is perfect hiking all year round."
     
-//     }, function(err, campground){
-//         if(err){
-//             console.log(err);
-//         } else {
-//             console.log("NEWLY CREATED CAMPGOUND: ");
-//             console.log(campground);
-//     }
-// });
+    }, function(err, campground){
+        if(err){
+            console.log(err);
+        } else {
+            console.log("NEWLY CREATED CAMPGOUND: ");
+            console.log(campground);
+    }
+});
 
 
 // //now globally accessesible -> campground array - moved here until later on we migrate to Database...
