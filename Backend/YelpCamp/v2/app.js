@@ -41,7 +41,7 @@ app.get("/campgrounds", function(req, res){
         if(err){
             console.log(err);
         } else {
-            res.render("campgrounds", {campgrounds: allCampgrounds});   // [1st-campgrounds] --> renders the "views/campgrounds.ejs" file  //we use {} to indicate all the data that we want to pass... [2nd-campgrounds] --> is refering to the file name "campgrounds.ejs"... [3rd-campgrounds] --> is refering to the "var" named "campgrounds"
+            res.render("index", {campgrounds: allCampgrounds});   // [1st-campgrounds] --> renders the "views/campgrounds.ejs" file  //we use {} to indicate all the data that we want to pass... [2nd-campgrounds] --> is refering to the file name "campgrounds.ejs"... [3rd-campgrounds] --> is refering to the "var" named "campgrounds"
         }
     });
 });
@@ -75,10 +75,14 @@ app.get("/campgrounds/new", function(req, res){   //RESTful convention of "/camp
 //***(4) SHOW -> RESTful route -> shows info about one dog
 app.get("/campgrounds/:id", function(req, res){   //***ORDER of the ROUTE matter... If I switch places to top -> ":id" with "/campgrounds" then the later will not get executed..
     //find campground with provided "id"
-    
-    //render show template with that campground 
-    
-    res.send("THIS WILL BE THE **SHOW** PAGE ONE DAY!!");
+    Campground.FindById(req.param.id, function(err, foundCampground){    //New method that Mongo gives us
+        if(err){
+            console.log()
+        } else {
+            //render show template with that campground 
+            res.render("show");
+        }
+    });  
 });
 
 
@@ -89,11 +93,11 @@ app.get("/campgrounds/:id", function(req, res){   //***ORDER of the ROUTE matter
 
 
 
-// Error page
-app.get("*", function(req, res){
-   console.log("User Entered wrong URL...!!");
-   res.send("Please Enter Corret URL.");
-});
+// // Error page
+// app.get("/*", function(req, res){
+//   console.log("User Entered wrong URL...!!");
+//   res.send("Please Enter Corret URL.");
+// });
 // Server setup for c9
 app.listen(process.env.PORT, process.env.IP, function(){
    console.log("The YelpCamp Server Has Started !!!");
@@ -105,20 +109,20 @@ app.listen(process.env.PORT, process.env.IP, function(){
 
 
 
-Campground.create(   //Trying out data entry testing... was successful
-    {
-    name: "green brush",
-    image: "https://images.pexels.com/photos/699558/pexels-photo-699558.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=350",
-    description: "This is a huge mountain with stunning scenery. Weather is perfect hiking all year round."
+// Campground.create(   //Trying out data entry testing... was successful
+//     {
+//     name: "green brush",
+//     image: "https://images.pexels.com/photos/699558/pexels-photo-699558.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=350",
+//     description: "This is a huge mountain with stunning scenery. Weather is perfect hiking all year round."
     
-    }, function(err, campground){
-        if(err){
-            console.log(err);
-        } else {
-            console.log("NEWLY CREATED CAMPGOUND: ");
-            console.log(campground);
-    }
-});
+//     }, function(err, campground){
+//         if(err){
+//             console.log(err);
+//         } else {
+//             console.log("NEWLY CREATED CAMPGOUND: ");
+//             console.log(campground);
+//     }
+// });
 
 
 // //now globally accessesible -> campground array - moved here until later on we migrate to Database...

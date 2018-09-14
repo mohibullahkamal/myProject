@@ -14,22 +14,38 @@
 
 #Project Details:
 
-## yelpCamp App - expressJS+Bootstrap (serverRequired)
+##yelpCamp App - expressJS+Bootstrap (serverRequired)
 
-### 5. Style the Campgrounds page:
-#### ..* Add a better header/title
-#### ..* Make Campgrounds display in a grid
+ .1. 
+ ..*
+ ..*
+ 
+ .2. 
+ ..*
+ ..*
+ 
+ .3. 
+ ..*
+ ..*
 
-### 6. Style the Navbar and Form:
-#### ..* Add a navbar to all templates
-#### ..* Style the new Campground form
+ .4. 
+ ..*
+ ..*
 
-### 7. Add Mongoose:
-#### ..* Install and configure mongoose
-#### ..* Setup Campground model
-#### ..* Use Campground model inside of our routes
+ .5. Style the Campgrounds page:
+ ..* Add a better header/title
+ ..* Make Campgrounds display in a grid
 
-8. Show Page
+ .6. Style the Navbar and Form:
+ ..* Add a navbar to all templates
+ ..* Style the new Campground form
+
+ .7. Add Mongoose:
+ ..* Install and configure mongoose
+ ..* Setup Campground model
+ ..* Use Campground model inside of our routes
+
+ .8. Show Page
  ..* Reviewed the RESTful routes we've seen so far 
  ..* Add description to our campground model
  ..* Show db.collection.drop()

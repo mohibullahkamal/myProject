@@ -17,7 +17,7 @@
         <!--        <h3>Our Most Popular Campgrounds!</h3>-->
         <!--    </div>-->
         <!--</div>-->
-        <div class="row text-center" style="display:flex; flex-wrap: wrap">
+        <div class="row text-center" style="display:flex; flex-wrap: wrap;">
             <% campgrounds.forEach(function(campground){ %>   <!-- for looping through "campgrounds" array, we use "forEach()" -->
                 <div class="col-md-3 col-sm-6">   <!-- Just to make it responsive; when medium then show 3 images else when small show 2 in a row...and 1 image per row when very small... -->
                     <div class="thumbnail">
@@ -25,6 +25,9 @@
                         <div class="caption">
                             <h4><%= campground.name %></h4>
                         </div>
+                        <p>
+                            <a href="/campgrounds/<%= campground._id %>" class="btn btn-primary">More Info</a>
+                        </p>
                     </div>
                 </div>
             <% }); %>
