@@ -75,16 +75,15 @@ app.get("/campgrounds/new", function(req, res){   //RESTful convention of "/camp
 //***(4) SHOW -> RESTful route -> shows info about one dog
 app.get("/campgrounds/:id", function(req, res){   //***ORDER of the ROUTE matter... If I switch places to top -> ":id" with "/campgrounds" then the later will not get executed..
     //find campground with provided "id"
-    Campground.FindById(req.param.id, function(err, foundCampground){    //New method that Mongo gives us
+    Campground.findById(req.params.id, function(err, foundCampground){    //New method that Mongo gives us... //***"req.params.id" helps us capture the "id"..--> just like we did for the farm animals Projects..MOW, Oink, ... noices....
         if(err){
-            console.log()
+            console.log(err);
         } else {
             //render show template with that campground 
-            res.render("show");
+            res.render("show", {campground: foundCampground});
         }
     });  
 });
-
 
 
 
