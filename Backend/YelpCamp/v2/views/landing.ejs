@@ -1,13 +1,17 @@
 <% include partials/header %>   <!-- "include" tag is an ejs tag... use it to include other .ejs files... don't add "=" after '<.%'... don't add "/" before "partials" path...-->
-
-    <h1>Landing Page!!</h1>
-    <p>Welcome to YelpCamp</p>
-    <a href="/campgrounds">View All Campgrounds</a>
-    <br/>
-    <a href="/campgrounds/new">Add New</a>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
+    
+    <div class="jumbotron text-center">
+        <h1>Welcome to YelpCamp!!</h1>
+        <br/>
+        <br/>
+        <a class="btn btn-primary btn-large" 
+            href="/campgrounds">View All Campgrounds</a>
+        <br/>
+        <br/>
+        <a class="btn btn-primary btn-large" 
+            href="/campgrounds/new">Add New</a>
+        <br/>
+        <br/>
+    </div>
     
 <% include partials/footer %>
