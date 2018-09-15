@@ -52,7 +52,8 @@ app.post("/campgrounds", function(req, res){   // "app.post()" command is used t
     //res.send("YOU HIT THE POST ROUTE!!");   // lets go test in Postman, whether our App is sending out a post command...
     var name = req.body.name;   //grabbibg data from Form and add to campgrounds array
     var image = req.body.image;   //grabbibg data from Form and add to campgrounds array
-    var newCampground = {name: name, image: image};   //making object to be used by "campground[] array..."
+    var desc = req.body.description;
+    var newCampground = {name: name, image: image, description: desc};   //making object to be used by "campground[] array..."
     
     // campgrounds.push(newCampground);   // We will delete this for now... //we push a new "campground" in the "campgrounds[]" array... but we need to push in an Object.. so lets make that Object with "var"... lets call it "newCampgound"... 
     
