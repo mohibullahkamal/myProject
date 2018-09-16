@@ -32,9 +32,10 @@ h1 {
     font-size: 200%;
 }
 
-/* span {
-    color: white;
-} */
+ #message {
+    display: inline-block;
+    width: 20%;
+} 
 
 #stripe {
     background-color: white;
@@ -45,4 +46,15 @@ h1 {
 
 .selected {
     background: blue;
+}
+
+button {
+    border: none;
+    background: none;
+    text-transform: uppercase;
+    height: 100%;
+    font-weight: 700;
+    color: steelblue;
+    letter-spacing: 1px;
+    font-size: inherit;
 }
