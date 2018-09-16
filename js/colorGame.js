@@ -2,12 +2,12 @@
 // ******************************************************
 // ****** All Variables *********************************
 // ******************************************************
+var numSquares = 6;
 var squares = document.querySelectorAll( ".square" );
 var pickedColor = pickColor();
 var colorDisplay = document.getElementById( "colorDisplay" );
 colorDisplay.textContent = pickedColor;
 
-var numSquares = 6;
 var colors = generateRandomColors( numSquares );   //array of six colors 
 var msg = document.getElementById( "message" );
 var h1 = document.querySelector( "h1" ); 
@@ -89,8 +89,8 @@ easyBtn.addEventListener( "click", function() {
 
 // hardBtn - event
 hardBtn.addEventListener( "click", function() {
-    easyBtn.classList.remove( "selected" );
     hardBtn.classList.add( "selected" );
+    easyBtn.classList.remove( "selected" );
     numSquares = 6;
     colors = generateRandomColors( numSquares );
     pickedColor = pickColor();
@@ -98,7 +98,6 @@ hardBtn.addEventListener( "click", function() {
     for( var i = 0; i < squares.length; i++ ) {
             squares[i].style.background = colors[i];
             squares[i].style.display = "black";
-        }
     }
 });
 // ******************************************************
