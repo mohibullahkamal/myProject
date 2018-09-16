@@ -61,13 +61,13 @@ reset.addEventListener( "click", function() {
     pickedColor = pickColor();
     //Change colorDisplay to match picked Color
     colorDisplay.textContent = pickedColor;
-    //change h1 color to original
-    h1.style.backgroundColor = "#232323";
     //change colors of squares
     for( var i = 0; i < squares.length; i++ ) {
         //add innitial colors to square
         squares[i].style.backgroundColor = colors[i];
     }
+    //change h1 color to original
+    h1.style.backgroundColor = "steelblue";
 });
 
 // easyBtn - event 

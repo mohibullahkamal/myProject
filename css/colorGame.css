@@ -1,5 +1,7 @@
 body {
     background-color: #232323;
+    margin: 0;
+    font-family: "Montserrat", "Avenir";
 }
 
 .square {
@@ -17,8 +19,17 @@ body {
 
 h1 {
     text-align: center;
+    line-height: 1.1;
+    font-weight: normal;
     color: white;
     background: steelblue;
+    margin: 0;
+    text-transform: uppercase;
+    padding: 20px 0;
+}
+
+#colorDisplay {
+    font-size: 200%;
 }
 
 /* span {
