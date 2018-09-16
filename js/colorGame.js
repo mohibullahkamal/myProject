@@ -11,7 +11,7 @@ colorDisplay.textContent = pickedColor;
 var colors = generateRandomColors( numSquares );   //array of six colors 
 var msg = document.getElementById( "message" );
 var h1 = document.querySelector( "h1" ); 
-var reset = document.getElementById( "reset" );
+var resetButton = document.getElementById( "reset" );
 var easyBtn = document.getElementById( "easyBtn" );
 var hardBtn = document.getElementById( "hardBtn" );
 // ******************************************************
@@ -34,7 +34,7 @@ for( var i = 0; i < squares.length; i++ ) {
         //compare color to pickedColor
         if( clickedColor === pickedColor ) {
             msg.textContent = "CORRECT!!";
-            reset.textContent = "Play Again?";
+            resetButton.textContent = "Play Again?";
             //Changing all squares to correct guessed color
             changeColors( clickedColor );
             //change h1 to correct guessed color
@@ -54,7 +54,7 @@ for( var i = 0; i < squares.length; i++ ) {
 // **** All Event listeners *****************************
 // ******************************************************
 // Reset Button - event  
-reset.addEventListener( "click", function() {
+resetButton.addEventListener( "click", function() {
     //generate all new colors
     colors = generateRandomColors( numSquares );
     //pick a new random color from array
