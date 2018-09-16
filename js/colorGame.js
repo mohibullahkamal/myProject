@@ -56,7 +56,7 @@ for( var i = 0; i < squares.length; i++ ) {
 // Reset Button - event  
 reset.addEventListener( "click", function() {
     //generate all new colors
-    colors = generateRandomColors( 6 );
+    colors = generateRandomColors( numSquares );
     //pick a new random color from array
     pickedColor = pickColor();
     //Change colorDisplay to match picked Color
@@ -91,7 +91,8 @@ easyBtn.addEventListener( "click", function() {
 hardBtn.addEventListener( "click", function() {
     easyBtn.classList.remove( "selected" );
     hardBtn.classList.add( "selected" );
-    colors = generateRandomColors( 6 );
+    numSquares = 6;
+    colors = generateRandomColors( numSquares );
     pickedColor = pickColor();
     colorDisplay.textContent = pickedColor;
     for( var i = 0; i < squares.length; i++ ) {

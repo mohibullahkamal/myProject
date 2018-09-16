@@ -16,7 +16,9 @@ body {
 }
 
 h1 {
+    text-align: center;
     color: white;
+    background: steelblue;
 }
 
 /* span {
