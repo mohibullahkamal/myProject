@@ -1,5 +1,3 @@
-//array of six colors 
-var colors = generateRandomColors( 6 );
 
 // ******************************************************
 // ****** All Variables *********************************
@@ -9,7 +7,8 @@ var pickedColor = pickColor();
 var colorDisplay = document.getElementById( "colorDisplay" );
 colorDisplay.textContent = pickedColor;
 
-var numberOfSquares = 6;
+var numSquares = 6;
+var colors = generateRandomColors( numSquares );   //array of six colors 
 var msg = document.getElementById( "message" );
 var h1 = document.querySelector( "h1" ); 
 var reset = document.getElementById( "reset" );
@@ -74,8 +73,9 @@ reset.addEventListener( "click", function() {
 // easyBtn - event 
 easyBtn.addEventListener( "click", function() {
     hardBtn.classList.remove( "selected" );
-    easyBtn.classList.add( "selected" ); 
-    colors = generateRandomColors( 3 );
+    easyBtn.classList.add( "selected" );
+    numSquares = 3;
+    colors = generateRandomColors( numSquares );
     pickedColor = pickColor();
     colorDisplay.textContent = pickedColor;
     for( var i = 0; i < squares.length; i++ ) {
