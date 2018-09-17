@@ -3,24 +3,24 @@
 // ****** All Variables *********************************
 // ******************************************************
 var numSquares = 6;
+var colors = generateRandomColors( numSquares );   //array of six colors 
 var squares = document.querySelectorAll( ".square" );
 var pickedColor = pickColor();
 var colorDisplay = document.getElementById( "colorDisplay" );
-colorDisplay.textContent = pickedColor;
-
-var colors = generateRandomColors( numSquares );   //array of six colors 
-var msg = document.getElementById( "message" );
+var messageDisplay = document.querySelector("#message");
 var h1 = document.querySelector( "h1" ); 
 var resetButton = document.getElementById( "reset" );
+var modeButtons = document.querySelectorAll( ".mode");
+
 var easyBtn = document.getElementById( "easyBtn" );
 var hardBtn = document.getElementById( "hardBtn" );
-// ******************************************************
-
-
-
+colorDisplay.textContent = pickedColor;
 
 // ******************************************************
-// lets loop through  colors***************************
+
+
+// ******************************************************
+// *** lets loop through  colors ************************
 // ******************************************************
 for( var i = 0; i < squares.length; i++ ) {
     //add innitial colors to square
@@ -33,7 +33,7 @@ for( var i = 0; i < squares.length; i++ ) {
         
         //compare color to pickedColor
         if( clickedColor === pickedColor ) {
-            msg.textContent = "CORRECT!!";
+            messageDisplay.textContent = "CORRECT!!";
             resetButton.textContent = "Play Again?";
             //Changing all squares to correct guessed color
             changeColors( clickedColor );
@@ -41,13 +41,11 @@ for( var i = 0; i < squares.length; i++ ) {
             h1.style.backgroundColor = clickedColor;
         } else {
             this.style.backgroundColor = "#232323";
-            msg.textContent = "TRY AGAIN";
+            messageDisplay.textContent = "TRY AGAIN";
         }
     });
 }
 // ******************************************************
-
-
 
 
 // ******************************************************
@@ -146,4 +144,25 @@ function randomColor() {
     //return rgb(r,g,b)
     return "rgb(" + r + ", " + g + ", " + b + ")";
 }
+
+function reset() {
+    colors = generateRandomColors(numSquares);
+    //pick a new random color from array
+	pickedColor = pickColor();
+	//change colorDisplay to match picked Color
+	colorDisplay.textContent = pickedColor;
+	resetButton.textContent = "New Colors";
+	messageDisplay.textContent = "";
+	//change colors of squares
+	for(var i = 0; i < squares.length; i++) {
+		if(colors[i]){
+			squares[i].style.display = "block";
+			squares[i].style.background = colors[i];
+		} else {
+			squares[i].style.display = "none";
+		}
+	}
+	h1.style.background = "steelblue";
+}
+
 // ******************************************************
