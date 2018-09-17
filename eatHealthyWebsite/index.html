@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/ionicons@4.2.4/dist/css/ionicons.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,300i,400" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="vendors/css/grid.css">
+    <link rel="stylesheet" type="text/css" href="vendors/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="resources/css/style.css">
+    <link rel="stylesheet" type="text/css" href="resources/css/queries.css">
+    <link rel="icon" href="resources/css/img/logo.png">
+    <title>Eat Healthy</title>
+  </head>
+
+  <body>
+    <!-- we are using <header> instead of <div>because Google SEO detection
+    will be efficient.. -->
+    <header>
+      <nav>
+        <div class="row">
+          <!-- Logo -->
+          <img src="resources/css/img/logo-white.png"
+                    alt="Eat Healthy Logo" class="logo">
+          <!-- the nav bar -->
+          <ul class="main-nav">
+            <li><a href="#"><strong>Food Delivery</strong></a></li>
+            <li><a href="#"><strong>How it Works</strong></a></li>
+            <li><a href="#"><strong>Our Cities</strong></a></li>
+            <li><a href="#"><strong>Sign Up</strong></a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="hero-text-box">
+        <h1>Goodbye junk food. <br> Hello super healthy meals.</h1>
+        <a class="btn btnHungry" href="#">I'm Hungry</a>
+        <a class="btn btnMore" href="#">Show me more</a>
+      </div>
+    </header>
+
+    <!-- ******************===================== -->
+    <!-- Features - Section ==================== -->
+    <!-- ******************===================== -->
+    <section class="section-features">
+      <div class="row">
+        <h2>Get food fast &mdash; not fast food.</h2>
+        <p class="long-copy">In today's fast life there
+          is no time to cook healthy meals. But health
+          is everything when it comes to staying fit and
+          focused it our goals. That is why we are here to
+          provide you premium delivery service for healthy
+          meals; so that you no longer have to worry about
+          your it again!</p>
+      </div>
+
+      <!-- I was making row for each colomn... finally found
+    that I just had to make 1 row an place all columns here -->
+      <div class="row">
+
+        <div class="col span-1-of-4 box">
+          <i class="icon ion-md-infinite icon-big"></i>
+          <h3>Up to 365 days/year</h3>
+          <p>You need to never think of ccoking again
+            since we take care of it all days in the year.
+            We take no break and we are available for your
+            order.
+          </p>
+        </div>
+
+        <div class="col span-1-of-4 box">
+          <i class="icon ion-md-stopwatch icon-big"></i>
+          <h3>Ready in 20 minutes</h3>
+          <p>You are just twenty minutes away from
+            ordering that delicious meal. We have our
+            top chefs spread all arround the city and they
+            are ready for your order.
+          </p>
+        </div>
+
+        <div class="col span-1-of-4 box">
+          <i class="icon ion-md-nutrition icon-big"></i>
+          <h3>100% organic</h3>
+          <p>With us you will get fresh,
+            organic and local food. Animals are
+            raised without added hormones or
+            antibiotics. Good for your health,
+            the environment, and it also tastes
+            better!</p>
+        </div>
+
+        <div class="col span-1-of-4 box">
+          <i class="icon ion-md-cart icon-big"></i>
+          <h3>Order anything</h3>
+          <p>We have no limitations to what
+            you can order since we provide massive
+            food menu to choose from. It is up to you!
+          </p>
+        </div>
+      <!-- class="row" ends here... -->
+      </div>
+    </section>
+
+    <!-- ******************===================== -->
+    <!-- Meals - Section======================== -->
+    <!-- ******************===================== -->
+    <section class="section-meals">
+      <ul class="meals-showcase clearfix">
+        <li>
+          <figure class="meal-photo">
+            <img src="resources/css/img/1.jpg"
+              alt="Korean bibimbap with egg and vegetables">
+          </figure>
+        </li>
+        <li>
+          <figure class="meal-photo">
+            <img src="resources/css/img/2.jpg"
+              alt="Simple italian pizza with cherry tomatoes">
+          </figure>
+        </li>
+        <li>
+          <figure class="meal-photo">
+            <img src="resources/css/img/3.jpg"
+              alt="Chicken breast steak with vegetables">
+          </figure>
+        </li>
+        <li>
+          <figure class="meal-photo">
+            <img src="resources/css/img/4.jpg"
+              alt="Autumn pumpkin soup">
+          </figure>
+        </li>
+      </ul>
+
+      <ul class="meals-showcase clearfix">
+        <li>
+          <figure class="meal-photo">
+            <img src="resources/css/img/5.jpg"
+              alt="Paleo beef steak with vegetables">
+          </figure>
+        </li>
+        <li>
+          <figure class="meal-photo">
+            <img src="resources/css/img/6.jpg"
+              alt="Healthy baguette with egg and vegetables">
+          </figure>
+        </li>
+        <li>
+          <figure class="meal-photo">
+            <img src="resources/css/img/7.jpg"
+              alt="Burger with cheddar and bacon">
+          </figure>
+        </li>
+        <li>
+          <figure class="meal-photo">
+            <img src="resources/css/img/8.jpg"
+              alt="Granola with cherries and strawberries">
+          </figure>
+        </li>
+      </ul>
+    </section>
+
+    <!-- ******************===================== -->
+    <!-- How it works - Section =================-->
+    <!-- ******************===================== -->
+    <section class="section-steps">
+      <!-- row 1 of 2 -->
+      <div class="row">
+        <h2> How it works &mdash; Simple as 1, 2, 3</h2>
+      </div>
+
+      <!-- row 2 of 2 -->
+      <div class="row">
+        <!-- column 1 of 2 for image  -->
+        <div class="col span-1-of-2 steps-box">
+          <img src="resources/css/img/app-iPhone.png"
+            alt="eatHealthy app on iphone"
+            class="app-screen">
+        </div>
+        <!-- column 2 of 2 for "How it works steps"  -->
+        <div class="col span-1-of-2 steps-box">
+          <div class="works-step">
+            <div>1</div>
+            <p>Please choose the subscription plan that best
+              fits you. What's the wait? Sign up today.</p>
+          </div>
+          <div class="works-step">
+            <div>2</div>
+            <p>You can order meals using our App, website,
+              or call us directly!</p>
+          </div>
+          <div class="works-step">
+            <div>3</div>
+            <p>Your food will be delivered in 20 minutes.
+              See you the next time!</p>
+          </div>
+          <a href="#" class="btn-app">
+            <img src="resources/css/img/download-app.svg"
+              alt="App Store button">
+          </a>
+          <a href="#" class="btn-app">
+            <img src="resources/css/img/download-app-android.png"
+              alt="Play Store button">
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- == CITIES section ======================== -->
+    <!-- ========================================== -->
+    <section class="section-cities">
+      <div class="row">
+        <h2>We're currently in these cities</h2>
+      </div>
+      <div class="row">
+        <!-- 1/4 col -->
+        <div class="col span-1-of-4 cities">
+                <img src="resources/css/img/berlin.jpg" alt="Berlin">
+                <h3>Berlin</h3>
+                <div class="city-feature">
+                  <i class="icon ion-md-happy icon-small"></i>
+                  2300+ happy eaters
+                </div>
+                <div class="city-feature">
+                  <i class="icon ion-md-star icon-small"></i>
+                  110+ top chefs
+                </div>
+                <div class="city-feature">
+                  <i class="icon ion-md-egg icon-small"></i>
+                  <a href="#">@eatHealthy_berlin</a>
+            </div>
+          </div>
+
+        <!-- 2/4 col -->
+        <div class="col span-1-of-4 cities">
+          <img src="resources/css/img/sanFrancisco.jpg" alt="San Francisco">
+          <h3>San-Francisco</h3>
+          <div class="city-feature">
+            <i class="icon ion-md-happy icon-small"></i>
+            3700+ happy eaters
+          </div>
+          <div class="city-feature">
+            <i class="icon ion-md-star icon-small"></i>
+            160+ top chefs
+          </div>
+          <div class="city-feature">
+            <i class="icon ion-md-egg icon-small"></i>
+            <a href="#">@eatHealthy_sf</a>
+          </div>
+        </div>
+
+        <!-- 3/4 col -->
+        <div class="col span-1-of-4 cities">
+          <img src="resources/css/img/lisbon.jpg" alt="Lisbon">
+          <h3>Lisbon</h3>
+          <div class="city-feature">
+            <i class="icon ion-md-happy icon-small"></i>
+            1600+ happy eaters
+          </div>
+          <div class="city-feature">
+            <i class="icon ion-md-star icon-small"></i>
+            60+ top chefs
+          </div>
+          <div class="city-feature">
+            <i class="icon ion-md-egg icon-small"></i>
+            <a href="#">@eatHealthy_lx</a>
+          </div>
+        </div>
+
+        <!-- 4/4 col -->
+        <div class="col span-1-of-4 cities">
+          <img src="resources/css/img/london.jpg" alt="London">
+          <h3>London</h3>
+          <div class="city-feature">
+            <i class="icon ion-md-happy icon-small"></i>
+            1200+ happy eaters
+          </div>
+          <div class="city-feature">
+            <i class="icon ion-md-star icon-small"></i>
+            50+ top chefs
+          </div>
+          <div class="city-feature">
+            <i class="icon ion-md-egg icon-small"></i>
+            <a href="#">@eatHealthy_london</a>
+          </div>
+        </div>
+
+    </section>
+
+
+    <!-- ========================================== -->
+    <!-- == TESTIMONIAL SECTION =================== -->
+    <!-- ========================================== -->
+
+    <section class="section-testimonials">
+      <div class="row">
+        <h2>Our customers can't live without us</h2>
+      </div>
+      <div class="row">
+        <!-- Because we have 3 testimonials... -->
+        <div class="col span-1-of-3">
+          <!-- HTML has an element designed to include
+        qoutes into HTML documents -->
+          <blockquote>
+            EatHealthy is awesome! I recently launched
+            a startup and I have no time for cooking,
+            so EatHealthy truely is a life-saver.
+            <cite><img src="resources/css/img/customer-1.png">
+              Ehsan Valkyrie Mahmud</cite>
+          </blockquote>
+        </div>
+        <div class="col span-1-of-3">
+          <!-- HTML has an element designed to include
+        qoutes into HTML documents -->
+          <blockquote>
+            Healthy, delicious and price performance are
+            all satisfying for regular customers. There
+            are lot of food delivery services here in Berlin
+            but EatHealthy is the best!!
+            <cite><img src="resources/css/img/customer-2.png">
+              Bayazid Bostame Sony</cite>
+          </blockquote>
+        </div>
+        <div class="col span-1-of-3">
+          <!-- HTML has an element designed to include
+        qoutes into HTML documents -->
+          <blockquote>
+            I tried several food delivery services in LA but
+            nothing comes close to the awesomely quick 20 minutes
+            service and reasonable price performance!!
+            <cite><img src="resources/css/img/customer-3.png">
+            K.a. Talha</cite>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===============================================  -->
+    <!-- ========= PLANS SECTION =====================  -->
+    <!-- ===============================================  -->
+    <!-- We learn:
+         [1]Design with border radius,
+         [2]How to create box shadows with CSS.. -->
+    <!-- ===============================================  -->
+    <section class="section-plans">
+      <div class="row">
+        <h2>Start eating healthy today</h2>
+      </div>
+
+      <div class="row">
+        <!--============= Plans Column 1-of-3 ==============-->
+        <div class="col span-1-of-3">
+          <div class="plan-box">
+            <!-- For Price -->
+            <div>
+              <h3>Premium</h3>
+              <p class="plan-price">$399<span>/ month</span></p>
+              <p class="plan-price-meal">
+                That’s only 13.30$ per meal
+              </p>
+            </div>
+            <!-- For Details -->
+            <!-- I will use ul to list the details.. -->
+            <div>
+              <ul>
+                <li><i class="ion-md-checkmark icon-small"></i>1 meal every day</li>
+                <li><i class="ion-md-checkmark icon-small"></i>Order 24/7</li>
+                <li><i class="ion-md-checkmark icon-small"></i>Free delivery</li>
+              </ul>
+            </div>
+            <!-- For sign-up button  -->
+            <div>
+              <a href="#" class="btn btnHungry">Sign up now</a>
+            </div>
+          </div>
+        </div>
+
+        <!--============= Plans Column 2-of-3 ==============-->
+        <div class="col span-1-of-3">
+          <div class="plan-box">
+            <!-- For Price -->
+            <div>
+              <h3>Pro</h3>
+              <p class="plan-price">$149<span>/ month</span></p>
+              <p class="plan-price-meal">
+                That’s only 14.90$ per meal
+              </p>
+            </div>
+            <!-- For Details -->
+            <!-- I will use ul to list the details.. -->
+            <div>
+              <ul>
+                <li><i class="ion-md-checkmark icon-small"></i>1 meal 10 days/month</li>
+                <li><i class="ion-md-checkmark icon-small"></i>Order 24/7</li>
+                <li><i class="ion-md-checkmark icon-small"></i>Free delivery</li>
+              </ul>
+            </div>
+            <!-- For sign-up button  -->
+            <div>
+              <a href="#" class="btn btnMore">Sign up now</a>
+            </div>
+          </div>
+        </div>
+
+        <!--============- Plans Column 3-of-3 ==============-->
+        <div class="col span-1-of-3">
+          <div class="plan-box">
+            <!-- For Price -->
+            <div>
+              <h3>Starter</h3>
+              <p class="plan-price">$19<span>/ meal</span></p>
+              <p class="plan-price-meal">
+                &nbsp
+              </p>
+            </div>
+            <!-- For Details -->
+            <!-- I will use ul to list the details.. -->
+            <div>
+              <ul>
+                <li><i class="ion-md-checkmark icon-small"></i>1 meal</li>
+                <li><i class="ion-md-checkmark icon-small"></i>Order from 8 am to 12 pm</li>
+                <li><i class="ion-md-checkmark icon-small"></i>Free delivery</li>
+              </ul>
+            </div>
+            <!-- For sign-up button  -->
+            <div>
+              <a href="#" class="btn btnMore">Sign up now</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===============================================  -->
+    <!-- ========= CONTACT FORM SECTION ================  -->
+    <!-- ===============================================  -->
+    <!-- We learn:
+        [1] How to use a set of new HTML element to create
+            forms: form, label, input, select, option, text area.
+        [2] How to style these elements. -->
+    <!-- ===============================================  -->
+    <section class="section-form">
+      <div class="row">
+        <h2>We're happy to hear from you</h2>
+      </div>
+
+      <!-- A "form" is a group of input elements, and we have
+        an HTML element where we put all of them.. we call it
+        from element..-->
+      <div class="row">
+        <!-- We won't do anything with "post" method
+          right now cause it requires advanced JS and backend
+          technologies to send user data; none of them is in
+          our project scope... -->
+        <form method="post" action="#" class="contact-form">
+          <!-- 1st/5 row of the FORM -->
+          <div class="row">
+            <div class="col span-1-of-3">
+              <!-- for="id" is a cool feature... click label to
+                    auto-select "Name"-label; applicable with
+                    text only..-->
+              <label for="name">Name</label>
+            </div>
+            <!-- This col will be twice as wide as above col.. -->
+            <div class="col span-2-of-3">
+              <!-- type-> sets what kind of input; id->tells property;
+                    placeholder->preContained text..in text box..  -->
+              <input type="text" name="name" id="name"
+                placeholder="Your name" required>
+            </div>
+          </div>
+
+          <!-- 2nd/5 row of the FORM -->
+          <div class="row">
+            <div class="col span-1-of-3">
+              <label for="email">Email</label>
+            </div>
+            <div class="col span-2-of-3">
+              <input type="email" name="email" id="email"
+                placeholder="Your email" required>
+            </div>
+          </div>
+
+          <!-- 3rd/5 row of the FORM -->
+          <div class="row">
+            <div class="col span-1-of-3">
+              <label for="find-us">How did you find us?</label>
+            </div>
+            <div class="col span-2-of-3">
+              <select name="find-us" id="find-us">
+                <option value="friends" selected>Friends</option>
+                <option value="search">Search engine</option>
+                <option value="ad">Advertisements</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- 4th/5 row of the FORM -->
+          <div class="row">
+            <div class="col span-1-of-3">
+              <label>Newsletter?</label>
+            </div>
+            <div class="col span-2-of-3">
+              <input type="checkbox" name="news" id="news"
+                checked>Yes, please.
+            </div>
+          </div>
+
+          <!-- 5th/5 row of the FORM -->
+          <div class="row">
+            <div class="col span-1-of-3">
+              <label>Drop us a line</label>
+            </div>
+            <div class="col span-2-of-3">
+              <textarea name="message" placeholder="Your message"></textarea>
+            </div>
+          </div>
+
+          <!-- SUBMIT BUTTON -->
+          <div class="row">
+            <div class="col span-1-of-3">
+              <label>&nbsp</label>
+            </div>
+            <div class="col span-2-of-3">
+              <input type="submit" value="Send it!">
+            </div>
+          </div>
+
+        </form>
+      </div>
+    </section>
+
+
+
+    <!-- ===============================================  -->
+    <!-- ========= FOOTER SECTION ================  -->
+    <!-- ===============================================  -->
+    <!-- We learn:
+        [1] How to build a simple but effective footer.
+        [2] A cool way of using social icons. -->
+    <!-- ===============================================  -->
+    <footer>
+      <div class="row">
+        <div class="col span-1-of-2">
+          <ul class="footer-nav">
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Press</a></li>
+            <li><a href="#">iOS App</a></li>
+            <li><a href="#">Android App</a></li>
+          </ul>
+        </div>
+        <div class="col span-1-of-2">
+          <ul class="social-links">
+            <li><a href="https://www.facebook.com/mohibullah.kamaluddin1"><i class="ion-logo-facebook"></i></a></li>
+            <li><a href="https://twitter.com/motweet2020"><i class="ion-logo-twitter"></i></a></li>
+            <li><a href="#"><i class="ion-logo-googleplus"></i></a></li>
+            <li><a href="#"><i class="ion-logo-instagram"></i></a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="row">
+        <p>
+          Copyright &copy; 2018 by eatHealthy.&nbsp All rights reserved.&nbsp Designed
+          and build by Mohibullah Kamal; &nbsp <a href="https://github.com/mogit2020/eatHealthy">
+            find on Github</a>
+        </p>
+      </div>
+
+    </footer>
+
+  </body>
+
+  <script src="//cdn.jsdelivr.net/respond/1.4.2/respond.min.js"></script>
+  <script src="bower_components/html5shiv/dist/html5shiv.js"></script>
+  <script type="text/javascript" src="selectivizr.js"></script>
+
+</html>

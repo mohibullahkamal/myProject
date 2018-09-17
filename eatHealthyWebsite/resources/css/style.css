@@ -1,0 +1,730 @@
+/* ============================= */
+/* ======== BASIC SETUP ======== */
+/* ============================= */
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html,
+body {
+  background-color: #fff;
+  color: #555;
+  font-family: 'Lato', 'Arial', sans-serif;
+  font-size: 20px;
+  font-weight: 300;
+  text-rendering: optimizeLegibility;
+  /* After finishing basic design of website
+  I went to making website responsive and realized
+  that the text fields under CITIES-section behaving
+  weirdly... therefore I added this */
+  overflow-x: hidden;
+}
+
+/* this is used to clear the float */
+/* Not really understood cause not in scope */
+/* its quite often used in webdesign dev..
+ but its ok if u don't understand it now...
+ It will clear the element "after" ul element runs...
+ The child element of this class which are the
+ <li> elements are the ones which has
+ the float property... and so we say the parent
+ the parent has this "clearfix" class and then that
+ float will be cleared after the ul element...
+ and we do that in two of the <ul> elemets and now
+ the problem is solved... */
+.clearfix {zoom: 1}
+.clearfix::after {
+  content: '.';
+  clear: both;
+  display: block;
+  height: 0;
+  visibility: hidden;
+}
+
+/* ================================ */
+/* ============ HEADER ============ */
+/* ================================ */
+
+/* ==== HEADING ==== */
+header {
+  background-image: -webkit-gradient(linear,
+    left top, left bottom,
+    from(rgba(0, 0, 0, 0.4)),
+    to(rgba(0, 0, 0, 0.5))),
+    url(img/hero.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4),
+    rgba(0, 0, 0, 0.5)),
+    url(img/hero.jpg);
+  /* background image centering */
+  background-size: cover;
+  background-position: center;
+  /*---"vh" meaning its 100% of the viewing height */
+  height: 100vh;
+  background-attachment: fixed;
+}
+
+.hero-text-box {
+  position: absolute;
+  width: 1140px;
+  top: 50%;
+  left: 50%;
+  -webkit-transform:translate(-50%, -50%);
+          transform:translate(-50%, -50%);
+}
+
+
+/* ============================== */
+/* ==== REUSABLE COMPONENTS ==== */
+/* ============================== */
+h1,
+h2,
+h3 {
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+h1 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: white;
+  font-size: 240%;
+  word-spacing: 4px;
+  letter-spacing: 1px;
+}
+
+h2 {
+  font-size: 180%;
+  word-spacing: 2px;
+  text-align: center;
+  margin-bottom: 30px;
+  letter-spacing: 1px;
+}
+
+h2::after {
+  display: block;
+  height: 2px;
+  background-color: orange;
+  content: " ";
+  width: 100px;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+
+h3 {
+  font-size: 110%;
+  margin-bottom: 15px;
+}
+
+.box {
+  padding: 1%;
+}
+
+.box p {
+  font-size: 90%;
+  line-height: 145%;
+}
+
+section {
+  padding: 80px 0;
+}
+
+/* For the navigation qnd logo... but could
+also be used for other classes.. */
+.row {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+/* icon-small is done for "Cities feature" but
+could be reused in other classes */
+.icon-small {
+  display: inline-block;
+  width: 30px;
+  text-align: center;
+  color: orange;
+  font-size: 120%;
+  margin-right: 10px;
+
+  /* secrets to align text and icons..
+  =ve margin gives space and -ve takes away...
+  so adjust it however to desire..*/
+  line-height: 120%;
+  vertical-align: middle;
+  margin-top: -5px;
+}
+
+
+/* =================================================== */
+/* ======= LOGO and NAV BAR ========================== */
+/* =================================================== */
+
+.logo {
+  height: 150px;
+  width: auto;
+  float: left;
+  border-radius: 50px;
+  margin-top: 20px;
+  /* this is the transition magic...height set
+  to 'x's..... check height in .logo:hover,
+  .logo:active{.....}  */
+  -webkit-transition: height 0.3s;
+  transition: height 0.3s;
+}
+.logo:hover,
+.logo:active{
+  height: 250px;
+}
+
+.main-nav {
+  float: right;
+  /* get rid of bullet pts. */
+  list-style: none;
+  margin-top: 75px;
+}
+.main-nav li {
+  display: inline-block;
+  margin-left: 60px;
+}
+.main-nav li a:link,
+.main-nav li a:visited {
+  border-radius: 50px;
+  color: white;
+  text-decoration: none;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  /* set it in % for responsive design */
+  font-size: 90%;
+  border-bottom: 4px solid transparent;
+  -webkit-transition: border-bottom 0.5s, background-color 1.5s, color 0.5s;
+  transition: border-bottom 0.5s, background-color 1.5s, color 0.5s;
+  padding: 8px 12px;
+}
+.main-nav li a:hover,
+.main-nav li a:active {
+  border-bottom: 4px solid orange;
+  background-color: #CB5A00;
+  color: white;
+}
+
+/* ========================================== */
+/* ====== LINKS ============================= */
+/* ========================================== */
+a:link,
+a:visited {
+  color: orange;
+  text-decoration: none;
+  border-bottom: 1px solid orange;
+  padding: 1px;
+  -webkit-transition: border-bottom 0.2s, color 0.2s;
+  transition: border-bottom 0.2s, color 0.2s;
+}
+
+a:hover,
+a:active {
+  color: gray;
+  border-bottom: 1px solid transparent;
+}
+
+
+
+
+
+/* ========================================== */
+/* ====== BUTTONS =========================== */
+/* ========================================== */
+/* Sometimes we see webpages have different text color
+when returning back after selecting that text... to fix that use
+tag - .btn:link, .btn:visited - below...*/
+/* .btn: link,
+.btn: visited  */
+.btn:link,
+.btn:visited,
+/* Comes from Contact Form - section-meals */
+input[type=submit] {
+  display: inline-block;
+  padding: 10px 30px;
+  font-weight: 300;
+  text-decoration: none;
+  border-radius: 200px;
+  text-align: center;
+  /* awesome settings... I can change color of text changing
+  with -->  'color' */
+  -webkit-transition: background-color 0.2s, border 0.2s, color 0.5s;
+  transition: background-color 0.2s, border 0.2s, color 0.5s;
+  margin-top: 50px;
+}
+
+.btnHungry:link,
+.btnHungry:visited,
+/* Comes from Contact Form - section-meals */
+input[type=submit] {
+  background-color: orange;
+  border: 2px solid #CB5A0;
+  color: #fff;
+  /* Separate the two button a bit.. */
+  margin-right: 15px;
+}
+
+.btnMore:link,
+.btnMore:visited {
+  border: 2px solid orange;
+  color: orange;
+}
+
+.btn:hover,
+.btn:active,
+/* Comes from Contact Form - section-meals */
+input[type=submit]:hover,
+input[type=submit]:active {
+  background-color: #CB5A00;
+}
+
+.btnHungry:hover,
+.btnHungry:active,
+/* Comes from Contact Form - section-meals */
+input[type=submit]:hover,
+input[type=submit]:active {
+  /* here i want the color property to change
+  as I mentioned in --> .btn {transition:
+  background-color 0.2s, border 0.2s, color 1s;
+  HAHAHA awesome... */
+  color: black;
+  /* background-color: 2px solid green; */
+}
+
+.btnMore:hover,
+.btnMore:active {
+  border: 2px solid #CB5A00;
+  /* here i want the color property to change
+  as I mentioned in --> .btn {transition:
+  background-color 0.2s, border 0.2s, color 1s;
+  HAHAHA awesome... */
+  color: #fff;
+}
+
+/* ==================================================== */
+/* ========== PARAGRAPHS ============================== */
+/* ==================================================== */
+.long-copy {
+  line-height: 145%;
+  width: 70%;
+  margin-left: 15%;
+  /* I will make it in Features subheading
+  and refer to it bery specifically cause
+  I might use long-copy else where... */
+  /* margin-bottom: 30px; */
+}
+
+
+/* ---- ICONS ----*/
+.icon-big {
+  font-size: 350%;
+  display: block;
+  color: orange;
+  margin-bottom: 10px;
+}
+
+/* ==================================================== */
+/* === FEATURES SECTION =============================== */
+/* ==================================================== */
+.section-features .long-copy {
+  margin-bottom: 30px;
+}
+
+/* ==================================================== */
+/* ====== MEALS SECTION =============================== */
+/* ==================================================== */
+
+.section-meals{
+  padding: 0;
+}
+
+.meals-showcase {
+  list-style: none;
+  /* we want it to fit the entire browser width.. */
+  width: 100%;
+ }
+
+.meals-showcase li {
+  display: block;
+  float: left;
+  width: 25%;
+}
+
+/* we now get a bit of whitish image...
+If we want darker img then we can use
+a black background... */
+.meal-photo {
+  width: 100%;
+  margin: 0;
+  overflow: hidden;
+  background-color: black;
+}
+
+/* We have nice transition now... lets now try to
+make the img darker when hovered... using opacity */
+.meal-photo img {
+  -webkit-transform: scale(1.20);
+          transform: scale(1.20);
+  -webkit-transition: opacity 0.4s, -webkit-transform 0.25s;
+  transition: opacity 0.4s, -webkit-transform 0.25s;
+  transition: transform 0.25s, opacity 0.4s;
+  transition: transform 0.25s, opacity 0.4s, -webkit-transform 0.25s;
+  width: 100%;
+  height: auto;
+  opacity: 0.6;
+}
+
+/* but not the images are too big and it
+overflows the browser window.... we will use
+overflow:hidden in .meal-photo{... */
+.meal-photo img:hover {
+  -webkit-transform: scale(1.03);
+          transform: scale(1.03);
+  opacity: 1;
+}
+
+/* ==================================================== */
+/* ===== HOW IT WORKS SECTION ========================= */
+/* ==================================================== */
+.section-steps {
+  background-color: #f4f4f4;
+}
+
+.steps-box:first-child {
+  text-align: right;
+  padding-right: 3%;
+  margin-top: 30px;
+}
+
+.steps-box:last-child {
+  padding-left: 3%;
+  margin-top: 70px;
+}
+
+.app-screen {
+  width: 40%;
+}
+
+.works-step {
+  margin-bottom: 50px;
+}
+
+.works-step:last-of-type {
+  margin-bottom: 80px;
+}
+
+.works-step div {
+  color: orange;
+  border: 2px solid orange;
+  display: inline-block;
+  border-radius: 50%;
+  height: 55px;
+  width: 55px;
+  text-align: center;
+  padding: 5px;
+  float: left;
+  font-size: 150%;
+  margin-right: 25px;
+}
+
+.btn-app:link,
+.btn-app:visited {
+  border: 0;
+}
+
+.btn-app img {
+  height: 50px;
+  width: auto;
+  margin-right: 10px;
+}
+
+
+
+
+/* ==================================================== */
+/* ========= CITIES SECTION =========================== */
+/* ==================================================== */
+.cities img{
+  height: 200px;
+  width: auto;
+  padding: 20px 0;
+}
+
+/* .cities h3 {
+  font-size: 20px;
+
+}
+ */
+
+.cities img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 15px
+}
+
+.city-feature {
+  margin-bottom: 5px;
+}
+
+/* ==================================================== */
+/* ========= TESTIMONIAL SECTION ====================== */
+/* ==================================================== */
+
+/* Using Linear gradient to make nice darker image
+in the background */
+.section-testimonials {
+  background-image: -webkit-gradient(linear,
+    left top, left bottom,
+    from(rgba(0,0,0,0.7)),
+    to(rgba(0,0,0,0.7))), url(img/back-customers.jpg);
+  background-image: linear-gradient(rgba(0,0,0,0.7),
+    rgba(0,0,0,0.7)), url(img/back-customers.jpg);
+  background-size: cover;
+  color: white;
+  /* A very cool effect for background image with css */
+  background-attachment: fixed;
+}
+
+/* Mind it... its a selector and NOT a class.. */
+blockquote {
+  padding: 2%;
+  font-style: italic;
+  line-height: 145%;
+  /* the child; in this case "blockquote:before {}" has
+  position: absolute.. so we MUST have this class(parent element)
+  set to position: relative.. */
+  position: relative;
+  margin-top: 40px;
+}
+
+/* Mind it... its a selector and NOT a class; just
+the "blockquote" above... */
+cite {
+  font-size: 90%;
+  margin-top: 25px;
+  display: block;
+}
+
+/* We use Sudo "before" because we want
+this function to appear before "cite" occurs.. */
+blockquote:before {
+  /* remember adding text using ONLY css directly...
+  use "content"; "\201C" in code for quotation...
+  Now we need to have this in new line.. so we
+  have to make the quatation as a block element...*/
+  content: "\201C";
+  font-size: 600%;
+  display: block;
+  /* To be easy for manipulation of location of
+  our quotation we give it coordinates..
+  For us to use absolute positioning; we need to make sure it's
+  parent has relative postitioning... see above in "blockquote{}"*/
+  position: absolute;
+  top: 0;
+  top: -5px;
+  left: -5px;
+}
+
+cite img {
+  height: 100px;
+  border-radius: 50%;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+/* ==================================================== */
+/* ========= PLANS SECTION ============================ */
+/* ==================================================== */
+/* We learn:
+     [1]Design with border radius,
+     [2]How to create box shadows with CSS.. */
+/* ==================================================== */
+.section-plans {
+  background-color: #f4f4f4;
+}
+
+.plan-box {
+  background-color: #fff;
+  border-radius: 5px;
+  border-top-right-radius: 100px;
+  border-bottom-left-radius: 140px;
+  width: 90%;
+  margin-left: 5%;
+  /* THIS IS COOOL!!!  */
+  /* box-shadow: x-axisOffset y-axisOffset blur color */
+  -webkit-box-shadow: 0 10px 20px gray;
+          box-shadow: 0 10px 20px gray;
+}
+
+.plan-box div {
+  padding: 15px;
+  border-bottom: 4px solid #f4f4f4;
+}
+
+.plan-box div:first-child {
+  background-color: #f9f9f9;
+  border-top-right-radius: 100px;
+}
+
+.plan-box div:last-child {
+  text-align: center;
+  border: 0;
+}
+
+.plan-price {
+  font-size: 300%;
+  margin-bottom: 10px;
+  font-weight: 100;
+  color: orange;
+}
+
+/* Below is the child of ".plan-price" so will
+inherit all features from parent... */
+.plan-price span{
+  font-size: 30%;
+  font-weight: 300;
+}
+
+.plan-price-meal {
+  font-size: 80%
+}
+
+.plan-box ul {
+  list-style: none;
+}
+
+.plan-box ul li {
+  padding: 5px 0;
+}
+
+/* ==================================================== */
+/* ========= CONTACT FORM SECTION ===================== */
+/* ==================================================== */
+/* We learn:
+    [1] How to use a set of new HTML element to create
+        forms: form, label, input, select, option, textarea.
+    [2] How to style these elements.*/
+/* ==================================================== */
+.contact-form {
+  width: 60%;
+  margin: 0 auto;
+}
+
+/* This is a new selector in .css you learnt in this project :) */
+input[type=text],
+input[type=email],
+select,
+textarea {
+  width: 100%;
+  padding: 7px;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+}
+
+/* We added "input[type=sumbit]" in .btn class (look waaaay above)
+    because we want it to look n feel n function like .btn*/
+
+
+textarea {
+  height: 100px;
+}
+
+input[type=checkbox] {
+  margin: 10px 5px 10px 0;
+}
+
+/* we want to get rid of blue color box highlightings.. */
+*:focus {
+  outline: none;
+}
+
+/* ==================================================== */
+/* ========= FOOTER SECTION =========================== */
+/* ==================================================== */
+/* We learn:
+    [1] How to build a simple but effective footer.
+    [2] A cool way of using social icons.
+/* ==================================================== */
+footer {
+  background-color: #333;
+  padding: 50px;
+  font-size: 80%;
+}
+
+.footer-nav {
+  list-style: none;
+  float: left;
+}
+
+.social-links {
+  list-style: none;
+  float: right;
+}
+
+.footer-nav li,
+.social-links li  {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+/* In chrome Inspect Element you will find that
+the last Instagram element is not totally alligned
+to the right... so we use the last-child sudo.. */
+.footer-nav li:last-child,
+.social-links li:last-child {
+  margin-right: 0;
+}
+
+.footer-nav li a:link,
+.footer-nav li a:visited,
+.social-links li a:link,
+.social-links li s:visited {
+  text-decoration: none;
+  border: 0;
+  color: gray;
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s;
+}
+
+.footer-nav li a:hover,
+.footer-nav li a:active {
+  color: #ddd;
+}
+
+.social-links li a:link,
+.social-links li a:visited {
+  font-size: 160%;
+}
+
+/* When hovered changes to original colors.. */
+.ion-logo-facebook:hover {
+  color: #3b5998;
+}
+.ion-logo-twitter:hover {
+  color: #00aced;
+}
+.ion-logo-googleplus:hover {
+  color: #dd4b39;
+}
+.ion-logo-instagram:hover {
+  color: #517fa4;
+}
+
+.ion-logo-facebook,
+.ion-logo-twitter,
+.ion-logo-googleplus,
+.ion-logo-instagram {
+  -webkit-transition: color 0.4s;
+  transition: color 0.4s;
+}
+
+
+footer p {
+   color: gray;
+   text-align: center;
+   margin-top: 20px;
+}

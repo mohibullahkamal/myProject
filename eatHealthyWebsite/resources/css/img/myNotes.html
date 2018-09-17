@@ -1,0 +1,411 @@
+10.07.2018(Tues):
+
+//building the header - section0:
+
+.herotext {
+postionabsolite
+width 50
+top 5050perceleft50%
+transform: transfrom(-50%, 50%)
+
+
+header{
+//make background a bit darker..make to images at the same time..
+background-imaege: linar-gradient(rgba(0,0,0,0),rgba(0,0,0,0)), url(img/....)
+}#000c
+
+040-building the header...
+change coloe of headubf to #fff fontsize to 240%, in responsive design set html
+to px and below h1 to % so they can change responsively
+lets set to texttransform--upper case tso its looks nice
+we use the text-transform to upper, letter and word spacing to 1px and 4px respec...
+put a br so it looks good.
+**************
+**************
+now lets formals the bieeons
+first we atriinute class btn calss btn btn-f-fullclass and
+btn btn-ghost
+.btn in css a normal button is inline element but we need
+it inline blokc
+padding to 10 30px
+fontweight 300   text decor none
+use flat uicolors to select nie orange uicolorsnow we want the buttin to be nice
+and round so border radius
+
+thn we can say what to do when hover... .btn:hover,.btn
+h:active{ get darker shade of a color, 0to255.com,
+choose a darker shade... copy no. and {background color:
+darker orange, now we have a orange text door text on
+button change..
+bit advances.. transition.. .btnHUNGRY.link.viisted...
+transition: background-color 0.2s, border 0.2s, color
+0.2s...
+add margin-right:15px
+
+***********
+*********
+Building header part 3:
+LETS put logo and navigation bar on top of this page...
+.html .... <na>...<div class..row... <img..src=...logo
+white alt=omnifood logo  class=logo>
+
+Now for the navigation... unordered list... <ul class main-nav
+<li> <a href=#>food delivery</a></li>
+<li how it works
+<li our cities...
+now the logo is huge... lets set the sizing...
+lets go to class .logo{height 100px;
+width: auto float:left,
+.main-nav{float to right... now we want to get rid of bullet points
+
+AGAIN -- <HEADER <nav <div class="row <img src="resources/img/logo-white...
+alt="eatHealthy logo" class="logo>
+<ul class"main-nav
+<li <a href="#>li>
+4 times copies
+
+
+... now go to style.css...
+.logo {
+height:100; width:auto; float:right;
+
+.main-nav {
+float:right; list-style:none; now get rid of bullet points... list-style:none;
+
+.main-nav li {
+display: inline-block; margin-left:40px;
+
+.main-nav li a {
+color: white; text-decoration: none;
+text-transform: uppercase; font-size:90%..because we always
+represent it in % here after main html{ was font-sie20px... for responsive design we keep
+  it in %... here we want 18px.. so we divide 18/20... we get 90%...
+
+now we want the logo and the nav buttons to be centered...
+.logo{
+margin-top:20px;
+
+.main-nav{
+margin-top:55px...eyeball it...
+
+lets put hover effect on the nav button... when hover
+a 2px border...
+
+.main-nav li a:link,
+.main-nav li a:visited(we did this before-visited link should look same) {...
+
+.main-nav li a:hover,
+.main-nav li a:active { we want a nice border around nav
+button when selected...
+border-bottom: 2px solid dark orange....
+
+but we want a nice transition... so we put a bottom at link visited...
+and add border-bottom: 2px solid transparent;.. it won't be visible until we hover...
+and 1transition:border
+-bottom 0.4s;
+and we need now the underline to be a bit below the nav button for beauty.. so...
+we add padding:8px 0
+
+
+****************************************
+********** features section ************
+****************************************
+features section... based on sketch...
+
+-> how to put content on website using :after pseudo-class
+-> for the first time we use fluid grid to build the features column..
+-> we learn to use icons..
+
+
+<section.. in html we actually have element named section..
+class="section-features>
+<div class=row
+    @*001* <i class"icon....->heart"
+
+<h2 GET food fast not ... &mdash;...for dash..
+<p class=long-copy>....Hello, we're...,we promise!
+
+now let use grid like a pro..
+<div class=row
+	<div class=col span-1-of-4
+		<i class "icon... @*004*-->infinity outline"
+		<h3 Up to 365 days/year
+		<p never cook again....
+		div>
+		...copy the entire <div class=col span-1-of-4 .... 3 times...and fill with text...
+
+now in browser it does not look good...lets edit it...
+Lets for now go to "ionicons.com" to look for awesome
+icons... continue up @*001*
+
+
+<div class=col span-1-of-4
+		<i class "icon... @*004*-->stopwatch outline"
+		<h3 bla..bla
+		<p never cook again....
+		div>
+<div class=col span-1-of-4
+		<i class "icon... @*004*-->nutrition outline"
+		<h3 bra...bla
+		<p never cook again....
+		div>
+<div class=col span-1-of-4
+		<i class "icon... @*004*-->cart outline"
+		<h3 bra...bla
+		<p never cook again....
+		div>
+.....
+........
+
+the lecture will conc on design part of features section...
+ now lets define the white space of features section background; because its very important...
+ lets go to Reusable components section in .css file:
+
+section {
+padding 80px 0;
+
+//change existing and separate h1...
+h1, h2, @*002*{
+font-weight 300; text-transform uppercase; letter-spacing 1px;
+
+h1{margin top ; margin-bottom ; color ; font-size ;
+word-spacing...;
+
+h2 { font-size 180%; word-spacing: 2px; text-a;;sign: center; margin-bottom; 30px;
+
+//i need a nice yellow line between margin and text...
+the after will just do anything after h2{...as if it
+was a normal element...
+
+//one :after in CSS2, now in CSS-3 it is ::after... here it means anything after
+h2 will be auto placed...
+h2::after {
+display: block; height:2px; background-color: dark orange;
+//we don't want any content....
+content: " "; width: 100px;margin: 0 auto;
+margin-top: 30px;
+
+
+/* ----- PARAGRAPHS ----- */
+.long-copy {
+line-height: 145%; width: 70%; margin-left: 15%;
+
+
+now the next thing is to format the boxes
+infinity, stopwatch, organic, cart....
+the boxes are too close...
+ now just make another class called box.. in all the four
+"SPAN-1-of-4" class calls...
+
+.box{
+padding: 1%;
+
+add h3 in @*002* because we want all h1,h2,h3 to be
+consistent in style...
+
+h3 {
+font-size: 110%;
+margin-bottom: 15px;
+
+//now I don't really like that the text don't fit in one
+line... "unto 365 days/yr"  "ready in 20min"  "100% organic" ....
+maybe the reason for that is letter spacing in h1 h2 h3{..
+so lets remove that and individually put in h1{ and h2{...
+
+...cool it fits now...
+lets resize the text para beneath...
+
+.box p {
+font-size: 90%;
+line-height: 145%;
+
+... now i WANT TO MAKE THE icons big... so i make class
+"icon-big" in @*004*
+
+//under * --- PARA.. --* make ..
+
+/* ---- ICONS ----*/
+.icon-big {
+font-size: 350%;
+display: block;
+color: dark orange;
+margin-bottom: 10px
+
+
+
+************************
+************************
+************************
+// call the icon class...is this case just change "heart"to
+what ever you want...
+<i class="icon ion-md-heart"></i>
+
+************************
+************************
+************************
+//this is the FAVOURITE MEALS section....
+************************
+************************
+YOU WILL LEARN:
+- How to make a grid of beautiful images
+- How to make a nice "zoom-in" transition, only using CSS
+- A way to make <img> elements darker...
+
+so we make a new section again...
+<section class section-meals
+  <ul class meala-showcase
+    <li <figure <img src="resources/img/1.jpg...." alt="description of the image..."
+    <li <figure <img src="resources/img/1.jpg...." alt="description of the image..."
+    <li <figure <img src="resources/img/1.jpg...." alt="description of the image..."
+    <li <figure <img src="resources/img/1.jpg...." alt="description of the image..."
+  /ul>
+  <ul class meala-showcase
+    <li <figure <img src="resources/img/1.jpg...." alt="description of the image..."
+    <li <figure <img src="resources/img/1.jpg...." alt="description of the image..."
+    <li <figure <img src="resources/img/1.jpg...." alt="description of the image..."
+    <li <figure <img src="resources/img/1.jpg...." alt="description of the image..."
+  /ul>
+
+  .... fill all...
+
+/* ==== MEALS ==== */
+.meals-showcase {
+  list-style: none;
+  width: 100%; // we want it to fit the entire browser width..
+ }
+
+.meals-showcase li {
+  display: block;
+  float: left;
+  width: 25%;
+}
+ ... just add class "meal-photo" to all "<figure>"...
+
+.meal-photo {
+  width: 100%;
+  margin: 0;
+}
+
+.meal-photo img {
+  width: 100%;
+  height: auto;
+}
+************************
+************************
+....Now lets work to have hover effect on the food images..
+
+
+// I dont like the padding between the 1st row and 2nd row food images...
+// there let:
+<!-- MEALS -->
+.section-meals {
+  padding: 0;
+}
+
+/* ...next is animation...when we hover the image gets
+zoomed in and get darker... */
+/* we scale the img ... */
+.meal-photo img {
+  ....
+  transform: scale(1.15);
+  /* this will give nice effect to transform
+  scale...*/
+  transition: transform 0.5s;
+}
+
+/* but not the images are too big and it
+overflows the browser window.... we will use
+overflow:hidden in .meal-photo{... */
+
+.meal-photo img:hover {
+  transform: scale(1.03);
+}
+
+/* We have nice transition now... lets now try to
+make the img darker when hovered... using opacity */
+.meal-photo img {
+  opacity: 0.7;
+  .....
+}
+
+/* we now get a bit of whitish image... If we want darker
+img then we can use a black background... */
+.meal-photo {
+  ...
+  background-color: black;
+}
+
+/* Very well the img got darker in general but
+now we have to animate the opacity here */
+
+.meal-photo img {
+  ...
+  transition: ..., opacity 0.5s;
+}
+.meal-photo img:hover{
+  opacity: 1;
+  ...
+}
+
+//Hurray done !!!!!!!!!...
+
+
+<!-- ************************ -->
+/* ====== HOW IT WORKS....Section =======*/
+<!-- ************************ -->
+
+What we learn in this section:
+- How to draw circles with CSS.
+- A cool technique to make separations between sections.
+- How to incorporate App Store and Play Store buttons.
+
+<section class="sections-steps"
+  <div class="row"
+    <h2> How it works... 1, 2, 3
+  /div>
+  <div class="row"
+    <div class="col span-1-of-2">
+      <img src...iPhone.png... alt="eatHealthy app on iphone" class="app-screen"
+    /div>
+    <div class="col span-1-of-2">
+      <div class="works-step">
+          <div 1
+          <p .....
+      <div class="works-step">
+          <div 1
+          <p .....
+      <div class="works-step">
+          <div 1
+          <p .....>
+
+
+... fix everything ...
+... now go to .css and fix all the sizing...
+
+.steps-box {
+  margin-top: 30px;
+}
+
+... Look for clearfix notes in style.css....
+don's have to completely understand clearfix class... used in webdesign advanced...
+just know when and why its required...
+
+
+<!-- ===================== -->
+<!-- == CITIES section === -->
+<!-- ===================== -->
+What we learn in this section:
+- Practice our new skill set.
+- How to use small icons aligned with some text.
+- How to style generic links.
+
+create new section ... section-cities...
+
+
+************************
+************************
+FROM NOW ON ALL NOTES ON THE .FILES ITSELF...
+************************
+************************
+************************
+************************
