@@ -45,39 +45,41 @@ for( var i = 0; i < squares.length; i++ ) {
 // ******************************************************
 // Reset Button - event  
 resetButton.addEventListener( "click", function() {
-    colors = generateRandomColors( numSquares );   //generate all new colors
-    pickedColor = pickColor();   //pick a new random color from array
-    colorDisplay.textContent = pickedColor;   //Change colorDisplay to match picked Color
-    this.textContent = "New Colors";
+    reset();   //for DRY code... :) the below lines of codes is omitted...
+
+    // colors = generateRandomColors( numSquares );   //generate all new colors
+    // pickedColor = pickColor();   //pick a new random color from array
+    // colorDisplay.textContent = pickedColor;   //Change colorDisplay to match picked Color
+    // this.textContent = "New Colors";
     
-    messageDisplay.textContent = "";   //After winning game "Correct" is show; this command removes it when new game selected 
-    //change colors of squares
-    for( var i = 0; i < squares.length; i++ ) {
-        squares[i].style.backgroundColor = colors[i];   //add innitial colors to square
-    }
-    h1.style.backgroundColor = "steelblue";   //change h1 color to original
+    // messageDisplay.textContent = "";   //After winning game "Correct" is show; this command removes it when new game selected 
+    // //change colors of squares
+    // for( var i = 0; i < squares.length; i++ ) {
+    //     squares[i].style.backgroundColor = colors[i];   //add innitial colors to square
+    // }
+    // h1.style.backgroundColor = "steelblue";   //change h1 color to original
 });
 
 //Mode - event
 for(var i = 0; i < modeButtons.length; i++) {
-    modeButtons[i].addEventListener("class", function() {
-        modeButtons[0].classList.remove("selected");   //Removing hoghlighting from easy and hard buttons
-        modeButtons[1].classList.remove("selected");   //Removing hoghlighting from easy and hard buttons
-        this.classList.add("selected");
+    modeButtons[i].addEventListener("click", function() {
+    modeButtons[0].classList.remove("selected");   //Removing hoghlighting from easy and hard buttons
+    modeButtons[1].classList.remove("selected");   //Removing hoghlighting from easy and hard buttons
+    this.classList.add("selected");
+    
+    this.textContent === "Easy" ? numSquares = 3: numSquares = 6;   //Ternary operator --> the below several line of code written in 1 line :)
+    // if(this.textContent ===  "Easy"){
+    //     numSquares = 3;
+    // } else {
+    //     numSquares = 6;
         
-        this.textContent === "Easy" ? numSquares = 3: numSquares = 6;   //Ternary operator --> the below several line of code written in 1 line :)
-        // if(this.textContent ===  "Easy"){
-        //     numSquares = 3;
-        // } else {
-        //     numSquares = 6;
-            
-        // }
-        reset();
-           //figure out how many squares to show
-           //pick new colors
-           //pick a new pickedColor
-           //Update page to reflect changes
-    });
+    // }
+    reset();
+    //figure out how many squares to show
+    //pick new colors
+    //pick a new pickedColor
+    //Update page to reflect changes
+});
 }
 
 
@@ -168,7 +170,12 @@ function reset() {
     messageDisplay.textContent = "";   //After winning game "Correct" is show; this command removes it when new game selected 
     //change colors of squares
     for( var i = 0; i < squares.length; i++ ) {
-        squares[i].style.backgroundColor = colors[i];   //add innitial colors to square
+        if(colors[i]){
+            squares[i].style.display =  "block";
+            squares[i].style.backgroundColor = colors[i];   //add innitial colors to square
+        } else {
+            squares[i].style.display = "none";
+        }
     }
     h1.style.backgroundColor = "steelblue";   //change h1 color to original
 }
