@@ -1,0 +1,43 @@
+<% include partials/header %>   <!-- "include" tag is an ejs tag... use it to include other .ejs files... don't add "=" after '<.%'... don't add "/" before "partials" path...-->
+
+    <div class="container">   <!-- Put all content inside Bootstrap's "container" for adding nice padding on both sides... -->
+        <header class="jumbotron">
+            <div class="jumbotron">   <!-- container within container because we realized that when window resized, the title of head moves to left edge... we want it to not push left edge -->
+                <h1 >Welcome to YelpCamp!!</h1>
+                <p>View our hand-picked Campgrounds from all over the world</p>
+                
+                <p> 
+                    <a class="btn btn-primary btn-large" href="/">Home</a>   <!-- to go back to "landing.ejs"... it refers to what was assigned in "app.get("/", func...)" .. and not "landing"... I made that mistake... -->
+                    <a class="btn btn-primary btn-large" href="/campgrounds/new">Add New Campground</a>
+                </p>
+            </div>        
+        </header>
+        <!--<div class="row">-->
+        <!--    <div class="col-lg-12">-->
+        <!--        <h3>Our Most Popular Campgrounds!</h3>-->
+        <!--    </div>-->
+        <!--</div>-->
+        <div class="row text-center" style="display:flex; flex-wrap: wrap;">
+            <% campgrounds.forEach(function(campground){ %>   <!-- for looping through "campgrounds" array, we use "forEach()" -->
+                <div class="col-md-3 col-sm-6">   <!-- Just to make it responsive; when medium then show 3 images else when small show 2 in a row...and 1 image per row when very small... -->
+                    <div class="thumbnail">
+                        <img src="<%= campground.image %>">
+                        <div class="caption">
+                            <h4><%= campground.name %></h4>
+                        </div>
+                        <p>
+                            <a href="/campgrounds/<%= campground._id %>" class="btn btn-primary">More Info</a>
+                        </p>
+                    </div>
+                </div>
+            <% }); %>
+        </div>
+    </div>
+    <br/>
+    <br/>
+    
+    <div class="jumbotron text-center">
+        <a class="btn btn-primary btn-large" href="/">Back to Home</a>
+    </div>
+
+<% include partials/footer %>
