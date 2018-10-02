@@ -3,6 +3,16 @@ import './App.css';
 import Person from './Person/Person';   // we can name anything... there we are following the convension -> naming it 'Person' after the 'Person.js'
 
 class App extends Component {
+  state = {
+    persons: [
+      {name: 'Max', age: 28 },
+    ]
+  }
+
+
+
+
+
   render() {
     return (
       <div className="App">
