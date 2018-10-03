@@ -6,8 +6,16 @@ class App extends Component {
   state = {
     persons: [
       {name: 'Max', age: 28 },
+      {name: 'Stephanie', age: 34 },
+      {name: 'Manu', age: 29 },
     ]
   }
+
+switchNameHandler = () => {
+  console.log('Was Clicked!');
+  //DON'T DO THIS --> this.state.persons[0].name = 'Max';
+}
+
   render() {
     return (
       <div className="App">
