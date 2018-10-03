@@ -8,11 +8,6 @@ class App extends Component {
       {name: 'Max', age: 28 },
     ]
   }
-
-
-
-
-
   render() {
     return (
       <div className="App">
