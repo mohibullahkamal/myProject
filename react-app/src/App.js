@@ -13,6 +13,7 @@ class App extends Component {
       <div className="App">
         <h1>Hi, I am a React App</h1>
         <p>This is really working!!</p>
+        <button>Switch Name</button>
         <Person name = "Ron" age = "27" />   {/*this is from Person.js*/} 
         <Person name = "Sheldon" age = "44" /> 
         <Person name = "Hermoyni" age = "32">My Hobby is coding</Person> 
