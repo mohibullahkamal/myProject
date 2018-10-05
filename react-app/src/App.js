@@ -12,28 +12,24 @@ class App extends Component {
     otherState: 'some other value'
   }
 
-switchNameHandler = () => {
-  console.log('Was Clicked!');
-  //DON'T DO THIS --> this.state.persons[0].name = 'Max';
-  this.setState( {
-    persona: [
-    {name: 'Max', age: 28 },
-    {name: 'Stephanie', age: 34 },
-    {name: 'Manu', age: 29 }, 
-  ]})
-}
-
+  switchNameHandler = () => {
+    //console.log('Was clicked!!');
+    this.state.persons[0].name = 'Maximillian'
+  }
 
   render() {
     return (
       <div className="App">
         <h1>Hi, I am a React App</h1>
         <p>This is really working!!</p>
-        <button>Switch Name</button>
-        <Person name = "Ron" age = "27" />   {/*this is from Person.js*/} 
-        <Person name = "Sheldon" age = "44" /> 
-        <Person name = "Hermoyni" age = "32">My Hobby is coding</Person> 
-        <Person name = "Elizabeth" age = "34" />  
+
+        {/* onClick is JSX syntax... */}
+        <button onClick={this.switchNameHandler}> Switch Name</button> 
+
+        <Person name = {this.state.persons[0].name} age = {this.state.persons[0].age} />
+        <Person name = {this.state.persons[0].name} age = {this.state.persons[0].age} /> 
+        <Person name = {this.state.persons[0].name} age = {this.state.persons[0].age} />
+        <Person name = {this.state.persons[0].name} age = {this.state.persons[0].age} />
       </div>
     );
     // return React.createElement('div', {className: 'App'}, React.createElement('h1', null, 'Does this work now??'));   //This is the JS version of the above JSX
@@ -41,4 +37,20 @@ switchNameHandler = () => {
 }
 
 export default App;
+
+
+
+
+
+// switchNameHandler = () => {
+//   console.log('Was Clicked!');
+//   //DON'T DO THIS --> this.state.persons[0].name = 'Max';
+//   this.setState( {
+//     persona: [
+//     {name: 'Max', age: 28 },
+//     {name: 'Stephanie', age: 34 },
+//     {name: 'Manu', age: 29 }, 
+//   ]})
+// }
+
 
