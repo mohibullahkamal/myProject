@@ -12,17 +12,16 @@ class App extends Component {
     otherState: 'some other value'
   }
 
-  switchNameHandler = () => {
+  switchNameHandler = (newName) => {
     //console.log('Was clicked!!');
     //Dont't do this-->  this.state.persons[0].name = 'Maximillian';
-    
-    this.setState(  {   //takes object as an argument and it will merge whatever we define here with the above "state".. 
+    this.setState( {   //takes object as an argument and it will merge whatever we define here with the above "state".. 
       persons: [
-        {name: 'MOHIB', age: 27 },
+        {name: newName, age: 27 },
         {name: 'Stephanie', age: 34 },
         {name: 'Manu', age: 29 },
       ]      
-    })   //takes object as an argument and it will merge whatever we define here with the above "state".. 
+    } )
   }
 
   render() {
@@ -32,7 +31,7 @@ class App extends Component {
         <p>This is really working!!</p>
 
         {/* onClick is JSX syntax... */}
-        <button onClick={this.switchNameHandler}> Switch Name</button> 
+        <button onClick={this.switchNameHandler.bind(this, 'Mooo!!')}> Switch Name</button> 
 
         <Person 
           name = {this.state.persons[0].name} 
@@ -41,11 +40,11 @@ class App extends Component {
         <Person 
           name = {this.state.persons[1].name} 
           age = {this.state.persons[1].age} 
-          clickABC = {this.switchNameHandler}>
-          My Hobbies: Racing</Person>
+          clickABC = {this.switchNameHandler.bind(this, 'Max!!')}>My Hobbies: Racing
+        </Person>
 
         <Person 
-          name = {this.state.persons[2].name} 
+          name = {this.state.persons[2].name}
           age = {this.state.persons[2].age} />
       </div>
     );
