@@ -14,7 +14,8 @@ class App extends Component {
 
   switchNameHandler = () => {
     //console.log('Was clicked!!');
-    this.state.persons[0].name = 'Maximillian'
+    //Dont't do this-->  this.state.persons[0].name = 'Maximillian';
+    this.setState({persons: })   //takes object as an argument and it will merge whatever we define here.. 
   }
 
   render() {
@@ -38,19 +39,5 @@ class App extends Component {
 
 export default App;
 
-
-
-
-
-// switchNameHandler = () => {
-//   console.log('Was Clicked!');
-//   //DON'T DO THIS --> this.state.persons[0].name = 'Max';
-//   this.setState( {
-//     persona: [
-//     {name: 'Max', age: 28 },
-//     {name: 'Stephanie', age: 34 },
-//     {name: 'Manu', age: 29 }, 
-//   ]})
-// }
 
 
