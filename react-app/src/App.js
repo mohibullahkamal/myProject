@@ -15,7 +15,14 @@ class App extends Component {
   switchNameHandler = () => {
     //console.log('Was clicked!!');
     //Dont't do this-->  this.state.persons[0].name = 'Maximillian';
-    this.setState({persons: })   //takes object as an argument and it will merge whatever we define here.. 
+    
+    this.setState(  {   //takes object as an argument and it will merge whatever we define here with the above "state".. 
+      persons: [
+        {name: 'MOHIB', age: 27 },
+        {name: 'Stephanie', age: 34 },
+        {name: 'Manu', age: 29 },
+      ]      
+    })   //takes object as an argument and it will merge whatever we define here with the above "state".. 
   }
 
   render() {
@@ -27,10 +34,19 @@ class App extends Component {
         {/* onClick is JSX syntax... */}
         <button onClick={this.switchNameHandler}> Switch Name</button> 
 
-        <Person name = {this.state.persons[0].name} age = {this.state.persons[0].age} />
-        <Person name = {this.state.persons[0].name} age = {this.state.persons[0].age} /> 
-        <Person name = {this.state.persons[0].name} age = {this.state.persons[0].age} />
-        <Person name = {this.state.persons[0].name} age = {this.state.persons[0].age} />
+        <Person 
+          name = {this.state.persons[0].name} 
+          age = {this.state.persons[0].age} />
+
+        <Person 
+          name = {this.state.persons[1].name} 
+          age = {this.state.persons[1].age} 
+          clickABC = {this.switchNameHandler}>
+          My Hobbies: Racing</Person>
+
+        <Person 
+          name = {this.state.persons[2].name} 
+          age = {this.state.persons[2].age} />
       </div>
     );
     // return React.createElement('div', {className: 'App'}, React.createElement('h1', null, 'Does this work now??'));   //This is the JS version of the above JSX
@@ -38,6 +54,5 @@ class App extends Component {
 }
 
 export default App;
-
 
 
