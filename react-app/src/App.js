@@ -6,8 +6,8 @@ class App extends Component {
   state = {
     persons: [
       {name: 'Max', age: 28 },
-      {name: 'Stephanie', age: 34 },
       {name: 'Manu', age: 29 },
+      {name: 'Stephanie', age: 34 }
     ],
     otherState: 'some other value'
   }
@@ -18,11 +18,23 @@ class App extends Component {
     this.setState( {   //takes object as an argument and it will merge whatever we define here with the above "state".. 
       persons: [
         {name: newName, age: 27 },
-        {name: 'Stephanie', age: 34 },
         {name: 'Manu', age: 29 },
+        {name: 'Stephanie', age: 34 }
       ]      
     } )
   }
+
+  nameChangedHandler = (event) => {
+    this.setState( {   //takes object as an argument and it will merge whatever we define here with the above "state".. 
+      persons: [
+        {name: 'Max', age: 27 },
+        {name: event.target.value, age: 29 },
+        {name: 'Stephanie', age: 34 }
+      ]      
+    } )
+  }
+
+
 
   render() {
     return (
@@ -40,7 +52,8 @@ class App extends Component {
         <Person 
           name = {this.state.persons[1].name} 
           age = {this.state.persons[1].age} 
-          clickABC = {this.switchNameHandler.bind(this, 'Max!!')}>My Hobbies: Racing
+          clickABC = {this.switchNameHandler.bind(this, 'Max!!')}
+          changed={this.nameChangedHandler}>My Hobbies: Racing
         </Person>
 
         <Person 
@@ -53,5 +66,4 @@ class App extends Component {
 }
 
 export default App;
-
 
