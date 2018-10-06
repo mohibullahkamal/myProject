@@ -24,8 +24,8 @@ class App extends Component {
   }
 
   deletePersonHandler = (personIndex) => {
-    // const persons = this.state.persons.slice();
-    const persons = 
+    // const persons = this.state.persons.slice();   // ".slice" simply copies the array and returns a new one which is then stored here... old version... use the ES6 version below...
+    const persons = [...this.state.persons];   //Spread operator; more mordern ES6... YOu should always update state in an Immutable Fashion... 
     persons.splice(personIndex, 1);   //".splice" --> simply removes one element from array
     this.setState({persons: persons});
   }
