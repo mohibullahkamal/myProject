@@ -35,9 +35,9 @@ class App extends Component {
     } )
   }
 
-  toggleMessageHandler = () => {
+  togglePersonsHandler = () => {
     const doesShow = this.state.showPersons;
-    this.setState({});
+    this.setState({showPersons: !doesShow});
   }
 
 
@@ -57,7 +57,7 @@ class App extends Component {
         {/* onClick is JSX syntax... */}
         <button 
           style={style}
-          onClick = {this.togglePersonHandler}> Switch Name
+          onClick = {this.togglePersonsHandler}> Switch Name
         </button> 
         
         {   //We can interject JS expressions into JSX using "{}"
