@@ -49,17 +49,11 @@ class App extends Component {
       padding: '8px',
       cursor: 'pointer'
     };
-    return (
-      <div className="App">
-        <h1>Hi, I am a React App</h1>
-        <p>This is really working!!</p>
 
-        {/* onClick is JSX syntax... */}
-        <button 
-          style={style}
-          onClick = {this.togglePersonsHandler}> Switch Name
-        </button> 
-        
+    let persons = null;
+
+    if (this.state.showPersons) {
+      persons = (
         <div>
           <Person 
             name = {this.state.persons[0].name} 
@@ -72,7 +66,20 @@ class App extends Component {
           <Person 
             name = {this.state.persons[2].name}
             age = {this.state.persons[2].age}/>
-        </div> 
+        </div>
+      );
+    }
+
+    return (
+      <div className="App">
+        <h1>Hi, I am a React App</h1>
+        <p>This is really working!!</p>
+
+        {/* onClick is JSX syntax... */}
+        <button 
+          style={style}
+          onClick = {this.togglePersonsHandler}> Toggle Persons</button>
+        {persons}
       </div>
     );
     // return React.createElement('div', {className: 'App'}, React.createElement('h1', null, 'Does this work now??'));   //This is the JS version of the above JSX
