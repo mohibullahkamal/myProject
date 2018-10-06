@@ -60,22 +60,19 @@ class App extends Component {
           onClick = {this.togglePersonsHandler}> Switch Name
         </button> 
         
-        {   //We can interject JS expressions into JSX using "{}"
-          this.state.showPersons === true ?   //If true then the following <div> gets executed
-            <div>
-              <Person 
-                name = {this.state.persons[0].name} 
-                age = {this.state.persons[0].age}/>
-              <Person 
-                name = {this.state.persons[1].name} 
-                age = {this.state.persons[1].age} 
-                clickABC = {this.switchNameHandler.bind(this, 'Max!!')}
-                changed = {this.nameChangedHandler}> My Hobbies: Racing</Person>
-              <Person 
-                name = {this.state.persons[2].name}
-                age = {this.state.persons[2].age}/>
-            </div> : null    //We have an else condition separated by colon; what do we do if not "true"... "null"--> render nothing...
-        }
+        <div>
+          <Person 
+            name = {this.state.persons[0].name} 
+            age = {this.state.persons[0].age}/>
+          <Person 
+            name = {this.state.persons[1].name} 
+            age = {this.state.persons[1].age} 
+            clickABC = {this.switchNameHandler.bind(this, 'Max!!')}
+            changed = {this.nameChangedHandler}> My Hobbies: Racing</Person>
+          <Person 
+            name = {this.state.persons[2].name}
+            age = {this.state.persons[2].age}/>
+        </div> 
       </div>
     );
     // return React.createElement('div', {className: 'App'}, React.createElement('h1', null, 'Does this work now??'));   //This is the JS version of the above JSX
