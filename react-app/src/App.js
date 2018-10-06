@@ -13,18 +13,6 @@ class App extends Component {
     showPersons: false
   }
 
-  switchNameHandler = (newName) => {
-    //console.log('Was clicked!!');
-    //Dont't do this-->  this.state.persons[0].name = 'Maximillian';
-    this.setState( {   //takes object as an argument and it will merge whatever we define here with the above "state".. 
-      persons: [
-        {name: newName, age: 27 },
-        {name: 'Manu', age: 29 },
-        {name: 'Stephanie', age: 34 }
-      ]      
-    } )
-  }
-
   nameChangedHandler = (event) => {
     this.setState( {   //takes object as an argument and it will merge whatever we define here with the above "state".. 
       persons: [
@@ -33,6 +21,12 @@ class App extends Component {
         {name: 'Stephanie', age: 34 }
       ]      
     } )
+  }
+
+  deletePersonHandler = (personIndex) => {
+    const persons = this.state.persons;
+    persons.splice(personIndex, 1);   //".splice" --> simply removes one element from array
+    this.setState({persons: persons});
   }
 
   togglePersonsHandler = () => {
@@ -55,8 +49,9 @@ class App extends Component {
     if (this.state.showPersons) {
       persons = (
         <div>
-          {this.state.persons.map(person => {
-            return <Person 
+          {this.state.persons.map((person, index) => {
+            return <Person
+              click={() => this.deletePersonHandler(index)}
               name={person.name} 
               age={person.age} />
           })}   {/*   .map() gives us a way to map simply maps every element in a given array into something else... It does this by executing a method on every element on a given array... */}
