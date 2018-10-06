@@ -35,30 +35,34 @@ class App extends Component {
   }
 
 
-
   render() {
+    const style = {
+      backgroundColor: 'white',
+      font: 'inherit',
+      border: '1px solid blue',
+      padding: '8px',
+      cursor: 'pointer'
+    };
     return (
       <div className="App">
         <h1>Hi, I am a React App</h1>
         <p>This is really working!!</p>
 
         {/* onClick is JSX syntax... */}
-        <button onClick={this.switchNameHandler.bind(this, 'Mooo!!')}> Switch Name</button> 
-
+        <button 
+          style={style}
+          onClick = {this.switchNameHandler.bind(this, 'Mooo!!')}> Switch Name</button> 
         <Person 
           name = {this.state.persons[0].name} 
-          age = {this.state.persons[0].age} />
-
+          age = {this.state.persons[0].age}/>
         <Person 
           name = {this.state.persons[1].name} 
           age = {this.state.persons[1].age} 
           clickABC = {this.switchNameHandler.bind(this, 'Max!!')}
-          changed={this.nameChangedHandler}>My Hobbies: Racing
-        </Person>
-
+          changed = {this.nameChangedHandler}> My Hobbies: Racing</Person>
         <Person 
           name = {this.state.persons[2].name}
-          age = {this.state.persons[2].age} />
+          age = {this.state.persons[2].age}/>
       </div>
     );
     // return React.createElement('div', {className: 'App'}, React.createElement('h1', null, 'Does this work now??'));   //This is the JS version of the above JSX
