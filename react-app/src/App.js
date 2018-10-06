@@ -3,13 +3,14 @@ import './App.css';
 import Person from './Person/Person';   // we can name anything... there we are following the convension -> naming it 'Person' after the 'Person.js'
 
 class App extends Component {
-  state = {
+  state = {   //can Only be used when "Component" is extended
     persons: [
       {name: 'Max', age: 28 },
       {name: 'Manu', age: 29 },
       {name: 'Stephanie', age: 34 }
     ],
-    otherState: 'some other value'
+    otherState: 'some other value',
+    showPersons: false
   }
 
   switchNameHandler = (newName) => {
@@ -34,6 +35,11 @@ class App extends Component {
     } )
   }
 
+  toggleMessageHandler = () => {
+    const doesShow = this.state.showPersons;
+    this.setState({});
+  }
+
 
   render() {
     const style = {
@@ -51,18 +57,25 @@ class App extends Component {
         {/* onClick is JSX syntax... */}
         <button 
           style={style}
-          onClick = {this.switchNameHandler.bind(this, 'Mooo!!')}> Switch Name</button> 
-        <Person 
-          name = {this.state.persons[0].name} 
-          age = {this.state.persons[0].age}/>
-        <Person 
-          name = {this.state.persons[1].name} 
-          age = {this.state.persons[1].age} 
-          clickABC = {this.switchNameHandler.bind(this, 'Max!!')}
-          changed = {this.nameChangedHandler}> My Hobbies: Racing</Person>
-        <Person 
-          name = {this.state.persons[2].name}
-          age = {this.state.persons[2].age}/>
+          onClick = {this.togglePersonHandler}> Switch Name
+        </button> 
+        
+        {   //We can interject JS expressions into JSX using "{}"
+          this.state.showPersons === true ?   //If true then the following <div> gets executed
+            <div>
+              <Person 
+                name = {this.state.persons[0].name} 
+                age = {this.state.persons[0].age}/>
+              <Person 
+                name = {this.state.persons[1].name} 
+                age = {this.state.persons[1].age} 
+                clickABC = {this.switchNameHandler.bind(this, 'Max!!')}
+                changed = {this.nameChangedHandler}> My Hobbies: Racing</Person>
+              <Person 
+                name = {this.state.persons[2].name}
+                age = {this.state.persons[2].age}/>
+            </div> : null    //We have an else condition separated by colon; what do we do if not "true"... "null"--> render nothing...
+        }
       </div>
     );
     // return React.createElement('div', {className: 'App'}, React.createElement('h1', null, 'Does this work now??'));   //This is the JS version of the above JSX
