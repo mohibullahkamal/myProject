@@ -5,9 +5,9 @@ import Person from './Person/Person';   // we can name anything... there we are 
 class App extends Component {
   state = {   //can Only be used when "Component" is extended
     persons: [
-      {name: 'Max', age: 28 },
-      {name: 'Manu', age: 29 },
-      {name: 'Stephanie', age: 34 }
+      {id: '001', name: 'Max', age: 28 },
+      {id: '002', name: 'Manu', age: 29 },
+      {id: '003', name: 'Stephanie', age: 34 }
     ],
     otherState: 'some other value',
     showPersons: false
@@ -54,7 +54,8 @@ class App extends Component {
             return <Person
               click={() => this.deletePersonHandler(index)}
               name={person.name} 
-              age={person.age} />
+              age={person.age} 
+              key={person.id} />
           })}   {/*   .map() gives us a way to map simply maps every element in a given array into something else... It does this by executing a method on every element on a given array... */}
         </div>
       );
