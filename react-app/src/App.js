@@ -13,15 +13,34 @@ class App extends Component {
     showPersons: false
   }
 
-  nameChangedHandler = (event) => {
-    this.setState( {   //takes object as an argument and it will merge whatever we define here with the above "state".. 
-      persons: [
-        {name: 'Max', age: 27 },
-        {name: event.target.value, age: 29 },
-        {name: 'Stephanie', age: 34 }
-      ]      
-    } )
+  nameChangedHandler = (event, id) => {
+    const personIndex = this.state.persons.findIndex(p => {
+      return p.id === id;
+    });
+
+
+    const persons = {
+      ...this.state.persons[personIndex]
+    };
+
+    // const person = Object.assign({}, this.state.persons[personindex]);
+
+    person.name = event.target.value;
+
+    const person = [...this.state.persons];
+    persons[personIndex] = person;
+
+    this.setState( {persons: persons} );
   }
+
+  //   this.setState( {   //takes object as an argument and it will merge whatever we define here with the above "state".. 
+  //     persons: [
+  //       {name: 'Max', age: 27 },
+  //       {name: event.target.value, age: 29 },
+  //       {name: 'Stephanie', age: 34 }
+  //     ]
+  //   } )
+  // }
 
   deletePersonHandler = (personIndex) => {
     // const persons = this.state.persons.slice();   // ".slice" simply copies the array and returns a new one which is then stored here... old version... use the ES6 version below...
@@ -55,7 +74,8 @@ class App extends Component {
               click={() => this.deletePersonHandler(index)}
               name={person.name} 
               age={person.age} 
-              key={person.id} />
+              key={person.id} 
+              changed={(event) => this.nameChangedHandler(event, person)} />
           })}   {/*   .map() gives us a way to map simply maps every element in a given array into something else... It does this by executing a method on every element on a given array... */}
         </div>
       );
