@@ -6,5 +6,4 @@
 3. yelpCamp App       -> ExpressJS; NodeJS; MongoDB; RESTful; Bootstrap; (serverRequired)
 4. movieSearch App    -> ExpressJS; NodeJS; omdbAPI; (serverRequired)
 5. addFriend App      -> ExpressJS; (serverRequired)
-6. todoList           -> jQuery
 </pre>
