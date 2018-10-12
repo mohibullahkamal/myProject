@@ -7,3 +7,4 @@
 4. movieSearch App    -> ExpressJS; NodeJS; omdbAPI; (serverRequired)
 5. addFriend App      -> ExpressJS; (serverRequired)
 </pre>
+![image](https://user-images.githubusercontent.com/9574723/46881378-9572d500-ce4b-11e8-9a02-00bd595149b7.png)
