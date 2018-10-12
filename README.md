@@ -7,3 +7,9 @@
 4. movieSearch App    -> ExpressJS; NodeJS; omdbAPI; (serverRequired)
 5. addFriend App      -> ExpressJS; (serverRequired)
 </pre>
+
+###yelpCamp App
+1. REST Routing:
+    - Way of mapping HTTP routes and CRUD.
+    - 7 RESTful routes
+2. 
