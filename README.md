@@ -7,6 +7,7 @@
 4. movieSearch App    -> ExpressJS; NodeJS; omdbAPI; (serverRequired)
 5. addFriend App      -> ExpressJS; (serverRequired)
 </pre>
+<<<<<<< HEAD
 
 ###yelpCamp App
 1. REST Routing:
