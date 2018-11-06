@@ -8,9 +8,7 @@
 <br><br><br>
 
 ### 2. colorGame  ->JavaScript
-<a href="./html/colorGame.html">
-<img height="110" alt="rgbgame" src="https://user-images.githubusercontent.com/9574723/48049557-5c562800-e19f-11e8-8a3e-60df3d415432.png">
-</a>
+[<img height="110" alt="rgbgame" src="https://user-images.githubusercontent.com/9574723/48049557-5c562800-e19f-11e8-8a3e-60df3d415432.png">](./indexColorGame.html)
 <br><br><br>
 
 ### 3. movieSearch App  ->ExpressJS; NodeJS; omdbAPI
