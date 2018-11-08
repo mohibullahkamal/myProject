@@ -1,5 +1,6 @@
 
 # My Projects:
+The following are some of the personal projects I worked on, and Web Technologies I used after the "->" sign.
 ##### Click below to view projects
 
 ### 1. [yelpCamp App  ->ExpressJS; NodeJS; MongoDB; RESTful; Bootstrap](https://learnwithcolt-mo2020.c9users.io/)
