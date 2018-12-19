@@ -34,3 +34,5 @@ This App takes a movie name and use omdb Api to retrieve movie names with movie 
 
 
 ###### Click images above to view respective projects
+---
+*`Full Disclosure: I follow the Awesome Udemy course by Colt Steele (The Web Developer Bootcamp). He is a great teacher and I learned a lot from his course.`*
