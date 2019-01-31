@@ -3,13 +3,11 @@
 The following are some of the projects I worked on:
 ### ***Click below to view projects
 
-### 1. [yelpCamp App  ->ExpressJS; NodeJS; MongoDB; RESTful; Bootstrap](https://learnwithcolt-mo2020.c9users.io/)
+### 1. [Photo Gallery App  ->ExpressJS; NodeJS; MongoDB; RESTful; Bootstrap](https://learnwithcolt-mo2020.c9users.io/)
 
 A photo gallery App build to test my RESTful and Backend skills. The App saves and retrieves images from Database.
 
-<a href="https://learnwithcolt-mo2020.c9users.io/">
-<img height="160" alt="yelpcamp" src="https://user-images.githubusercontent.com/9574723/48050972-f6b86a80-e1a3-11e8-93f1-cb0fdb0a143d.png">
-</a>
+[<img height="160" alt="photogallery" src="https://user-images.githubusercontent.com/9574723/52055929-1374fc00-2561-11e9-82d4-b63791b76d87.png">](https://learnwithcolt-mo2020.c9users.io/)
 <br><br>
 
 
@@ -35,4 +33,4 @@ This App takes a movie name and use omdb Api to retrieve movie names with movie 
 
 ###### Click images above to view respective projects
 ---
-*`Full Disclosure: I follow the Awesome Udemy course by Colt Steele (The Web Developer Bootcamp). He is a great teacher and I learned a lot from his course.`*
+*`Note: I follow the Awesome Udemy course by Colt Steele (The Web Developer Bootcamp). He is a great teacher and I learned a lot from his course.`*
