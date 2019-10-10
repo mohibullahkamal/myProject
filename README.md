@@ -1,5 +1,5 @@
 
-# My Projects:
+# My Project:
 The following are some of the projects I worked on:
 ### ***Click below to view projects
 
@@ -42,7 +42,7 @@ This project was build to practice my VanillaJS and jQuery skills. No frameworks
 
 
 
-###### Click images above to view respective projects
+###### Click images above to view respective project
 ---
 
 
