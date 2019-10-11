@@ -8,7 +8,7 @@ The following are some of the projects I worked on:
 
 This project was build to practice my VanillaJS and jQuery skills. No frameworks or libraries were used. This is a RGB color game where players have to guess the color after mixing three color values (Red, Green, Blue).
 
-[<img height="340" alt="rgbgame" src="https://user-images.githubusercontent.com/9574723/48049557-5c562800-e19f-11e8-8a3e-60df3d415432.png">](https://mohibullahkamal.github.io/myProjects/)
+[<img height="340" alt="rgbgame" src="https://user-images.githubusercontent.com/9574723/48049557-5c562800-e19f-11e8-8a3e-60df3d415432.png">](https://mohibullahkamal.github.io/myProject/)
 <br><br>
 
 
